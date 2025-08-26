@@ -1,0 +1,23 @@
+<div class="card use-country">
+  <div class="card-header">
+    <h3 class="m-0">Top Countries</h3>
+    <div class="card-header-right"></div>
+  </div>
+  <div class="card-body mt-0 state">
+    <ul class="d-flex">
+      @for( Countries of contriesData; track Countries ){
+      <li class="light-card balance-card {{Countries.bg}}">
+        <img src="{{Countries.image}}" alt="" />
+        <div class="Countries">
+          <span class="rounded-pill badge-{{Countries.color}}"></span>
+          <h5>{{Countries.name}}</h5>
+          <h6 class="mt-1 mb-0">{{Countries.percentage}}</h6>
+        </div>
+      </li>
+      }
+    </ul>
+    <div class="col-xl-12 mt-4">
+      <div class="map-height" leaflet [leafletOptions]="options1" style="height: 250px"></div>
+    </div>
+  </div>
+</div>

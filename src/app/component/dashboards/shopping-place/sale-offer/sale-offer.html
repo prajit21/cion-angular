@@ -1,0 +1,28 @@
+<div class="row">
+  @for( productitem of salesofferData; track productitem ){
+  <div class="col-xl-4 col-md-6 col-sm-12 box-col-4">
+    <div class="card weekend-card">
+      <div class="card-body">
+        <img class="w-100 mb-3" src="{{productitem.image}}" alt="" />
+        <div class="d-flex align-items-center">
+          <div class="flex-shrink-0">
+            <span>{{ productitem.title}}</span>
+            <p>{{ productitem.info}}</p>
+            <div class="d-flex align-items-center">
+              <h4>4.5</h4>
+              <span class="pull-right ms-2"><i class="fa fa-star font-secondary"></i></span>
+            </div>
+          </div>
+          <div class="flex-grow-1">
+            <button class="btn">{{ productitem.btn}}</button>
+            <div class="weekend-price">
+              {{ productitem.price1}}
+              <del>{{productitem.price2}}</del>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  }
+</div>

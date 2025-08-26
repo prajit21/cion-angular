@@ -1,0 +1,38 @@
+<div class="card total-earning">
+  <div class="card-body">
+    <div class="row">
+      @for(erningitem of erningdata; track erningitem ){
+      <div class="col-sm-7 box-col-7">
+        <div class="d-flex">
+          <div class="badge bg-light-primary badge-rounded font-primary me-2">$</div>
+          <div class="flex-grow-1">
+            <h3>{{erningitem.title}}</h3>
+          </div>
+        </div>
+        <h5>{{erningitem.price}}</h5>
+        <p class="d-flex">
+          <span class="bg-light-secondary me-2">
+            <svg>
+              <use href="assets/svg/icon-sprite.svg#arrow-down"></use>
+            </svg> </span
+          ><span class="font-secondary me-2">{{erningitem.percentage}}</span
+          ><span>{{erningitem.time}}</span>
+        </p>
+      </div>
+      }
+      <div class="col-sm-5 box-col-5">
+        <div id="expensesChart">
+          <apx-chart
+            [series]="erningchart.series"
+            [chart]="erningchart.chart"
+            [stroke]="erningchart.stroke"
+            [plotOptions]="erningchart.plotOptions"
+            [colors]="erningchart.colors"
+            [responsive]="erningchart.responsive"
+          >
+          </apx-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

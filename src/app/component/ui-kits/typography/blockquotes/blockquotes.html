@@ -1,0 +1,19 @@
+<div class="card overflow-hidden">
+  <div class="card-header pb-0">
+    <h3 class="mb-0">Blockquotes</h3>
+    <p class="f-m-light mt-1">
+      The <code>&lt;blockquote&gt;</code> tag specifies a section that is quoted from another
+      source.
+    </p>
+  </div>
+  <div class="card-body">
+    @for(backquoteitem of blockquote; track backquoteitem){
+    <div class="figure {{backquoteitem.class}} d-block dark-blockquote">
+      <blockquote class="blockquote">
+        <p class="mb-0 txt-dark f-w-600">{{backquoteitem.qutoes}}</p>
+        <figcaption class="blockquote-footer">{{backquoteitem.name}}</figcaption>
+      </blockquote>
+    </div>
+    }
+  </div>
+</div>

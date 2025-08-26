@@ -1,0 +1,27 @@
+<div class="card product-chart">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h3 class="m-0">Product Sales</h3>
+      <div class="card-header-right"></div>
+    </div>
+  </div>
+  <div class="card-body pb-0">
+    <div class="d-flex">
+      <h3 class="me-2">$12,000</h3>
+      <span>(15,080 To Goal)</span>
+    </div>
+    <div id="product-sales">
+      <apx-chart
+        [series]="salesChartData.series"
+        [chart]="salesChartData.chart"
+        [stroke]="salesChartData.stroke"
+        [grid]="salesChartData.grid"
+        [colors]="salesChartData.colors"
+        [xaxis]="salesChartData.xaxis"
+        [yaxis]="salesChartData.yaxis"
+        [responsive]="salesChartData.responsive"
+      >
+      </apx-chart>
+    </div>
+  </div>
+</div>

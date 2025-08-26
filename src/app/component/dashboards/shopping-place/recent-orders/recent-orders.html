@@ -1,0 +1,45 @@
+<div class="card invoice-card">
+  <div class="card-header pb-0">
+    <h3>Recent Orders</h3>
+  </div>
+  <div class="card-body transaction-card">
+    <div class="table-responsive theme-scrollbar">
+      <table class="display" style="width: 100%">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Product Name</th>
+            <th>Date</th>
+            <th>Payment</th>
+            <th>Status</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for(recentitem of orderitem; track recentitem ){
+          <tr class="odd">
+            <td>{{recentitem.idno}}</td>
+            <td>
+              <div class="d-flex">
+                <div class="flex-shrink-0"><img src="{{recentitem.Image}}" alt="" /></div>
+                <div class="flex-grow-1 ms-2">
+                  <a href="javascript:void(0)">
+                    <h4>{{recentitem.product_name}}</h4>
+                    <span>{{recentitem.productstatus}}</span>
+                  </a>
+                </div>
+              </div>
+            </td>
+            <td>{{recentitem.date}}</td>
+            <td>
+              <button class="btn">{{recentitem.paymentstatus}}</button>
+            </td>
+            <td class="txt-{{recentitem.color}}">{{recentitem.dilverstatus}}</td>
+            <td>${{recentitem.price}}</td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

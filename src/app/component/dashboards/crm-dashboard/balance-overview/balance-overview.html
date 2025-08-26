@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h3 class="m-0">Balance Overview</h3>
+      <div class="card-header-right"></div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div id="balance-overview">
+      <apx-chart
+        [series]="balanceOverviewData.series"
+        [grid]="balanceOverviewData.grid"
+        [chart]="balanceOverviewData.chart"
+        [plotOptions]="balanceOverviewData.plotOptions"
+        [stroke]="balanceOverviewData.stroke"
+        [dataLabels]="balanceOverviewData.dataLabels"
+        [xaxis]="balanceOverviewData.xaxis"
+        [yaxis]="balanceOverviewData.yaxis"
+        [legend]="balanceOverviewData.legend"
+        [fill]="balanceOverviewData.fill"
+        [colors]="balanceOverviewData.colors"
+      >
+      </apx-chart>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="card top-customer">
+  <div class="card-header pb-0">
+    <div class="header-top">
+      <h3 class="m-0">Top Customer</h3>
+      <div class="card-header-right"></div>
+    </div>
+  </div>
+  <div class="card-body">
+    @for(customer of topcustomerdata ; track customer; let i = $index){
+    <div class="d-flex align-items-center" [ngClass]=" i === 0 ? 'pt-0':''">
+      <img src="{{customer.Image}}" alt="" />
+      <div class="flex-grow-1 ms-2">
+        <a href="javascript:void(0)">
+          <h5>{{customer.name}}</h5>
+          <span>{{customer.code}}</span>
+        </a>
+      </div>
+      <div class="flex-shrink-0">
+        <button class="btn bg-light-{{customer.color}} txt-{{customer.color}}">
+          {{customer.membership}} <span>Mamber</span>
+        </button>
+      </div>
+    </div>
+    }
+  </div>
+</div>

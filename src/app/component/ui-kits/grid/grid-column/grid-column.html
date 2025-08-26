@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-header pb-0">
+    <h3>Grid For Column</h3>
+    <p class="mt-1 f-m-light"></p>
+    You may use predefined grid classes. Using <code>.col-md-*</code>you can set the grid system.
+  </div>
+  <div class="card-body grid-showcase">
+    <div class="row">
+      @for(columnitem of gridColumnData; track columnitem){
+      <div class="{{columnitem.class}} text-center">
+        <span>{{columnitem.text}}</span>
+      </div>
+      }
+    </div>
+  </div>
+</div>

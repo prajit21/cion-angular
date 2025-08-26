@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header pb-0">
+          <h3>IMAGE GALLERY</h3>
+        </div>
+        <div class="gallery my-gallery card-body row" gallerize>
+          @for(img of galleryGridData; track img){
+          <figure class="col-xl-3 col-md-4 col-6" itemprop="associatedMedia">
+            <a href="javascript:void(0)" itemprop="contentUrl">
+              <img class="img-thumbnail" [src]="img.srcUrl" alt="images" />
+            </a>
+          </figure>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-xl-12">
+    <div class="card">
+      <div class="card-header pb-0">
+        <div class="header-top">
+          <h3 class="m-0">Sales Analyics</h3>
+          <div class="card-header-right"></div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div id="company-viewchart">
+          <apx-chart
+            [series]="SalesAnalyticData.series"
+            [chart]="SalesAnalyticData.chart"
+            [stroke]="SalesAnalyticData.stroke"
+            [dataLabels]="SalesAnalyticData.dataLabels"
+            [legend]="SalesAnalyticData.legend"
+            [fill]="SalesAnalyticData.fill"
+            [grid]="SalesAnalyticData.grid"
+            [colors]="SalesAnalyticData.colors"
+            [xaxis]="SalesAnalyticData.xaxis"
+          >
+          </apx-chart>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-12">
+      <app-common-analyics></app-common-analyics>
+    </div>
+  </div>
+</div>

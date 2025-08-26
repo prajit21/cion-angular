@@ -1,0 +1,62 @@
+<div
+  class="tab-pane fade active show"
+  id="pills-created"
+  role="tabpanel"
+  aria-labelledby="pills-created-tab"
+>
+  <div class="card mb-0">
+    <div
+      class="card-header d-flex"
+      [ngClass]="gettaskData.data.length >0? 'card-no-border pb-0' : '' "
+    >
+      <h3 class="mb-0">{{ gettaskData.title }}</h3>
+      <ng-template #other>
+        <h3 class="mb-0">{{ gettaskData.title }}</h3>
+      </ng-template>
+      <a href="javascript:void(0)">
+        <app-feather-icon [icon]="'printer'" class="me-2"></app-feather-icon>
+        Print
+      </a>
+    </div>
+    <div class="card-body p-0">
+      <div class="taskadd">
+        <div class="table-responsive theme-scrollbar">
+          <table class="table">
+            <tbody>
+              @for(task of gettaskData.data; track task){
+              <tr>
+                <td>
+                  <h4 class="task_title_0 f-w-700">{{ task.title }}</h4>
+                  <p class="project_name_0">{{ task.subtitle }}</p>
+                </td>
+                <td>
+                  <p class="task_desc_0">{{ task.text }}</p>
+                </td>
+                <td>
+                  <a class="me-2" href="javascript:void(0)">
+                    <app-feather-icon [icon]="'link'"></app-feather-icon>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <app-feather-icon [icon]="'more-horizontal'"></app-feather-icon>
+                  </a>
+                </td>
+                <td>
+                  <a href="javascript:void(0)">
+                    <app-feather-icon [icon]="'trash-2'"></app-feather-icon>
+                  </a>
+                </td>
+              </tr>
+              } @empty{
+              <tr>
+                <div class="card-body">
+                  <div class="details-bookmark text-center"><span>No tasks found.</span></div>
+                </div>
+              </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="card">
+  <div class="card-body chat-body">
+    <div class="chat-box">
+      <div class="chat-left-aside">
+        <div class="d-flex">
+          <img class="rounded-circle user-image" src="assets/images/user/12.png" alt="" />
+          <div class="about">
+            <div class="name f-w-600">Mark Jecno</div>
+            <div class="status">Status...</div>
+          </div>
+        </div>
+        <div class="people-list" id="people-list">
+          <div class="search">
+            <form class="theme-form">
+              <div class="form-group mb-3">
+                <input class="form-control" type="text" placeholder="search" /><i
+                  class="fa fa-search"
+                ></i>
+              </div>
+            </form>
+          </div>
+          <ul class="list theme-scrollbar">
+            @for(user of searchUsers ; track user){
+            <li class="clearfix">
+              <img class="rounded-circle user-image" [src]="user.profile" alt="" />
+              <div class="status-circle {{user.class}}"></div>
+              <div class="about">
+                <div class="name">{{user.name}}</div>
+                <div class="status">{{user.status}}</div>
+              </div>
+            </li>
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

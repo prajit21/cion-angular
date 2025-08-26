@@ -1,0 +1,32 @@
+<div class="card">
+  <div class="card-header">
+    <h3 class="m-0">Activity Timeline</h3>
+    <div class="card-header-right"></div>
+  </div>
+  <div class="card-body">
+    <div class="activity-timeline">
+      @for(timelineData of timelineitem; track timelineData ){
+      <div class="d-flex align-items-start">
+        <div class="activity-line"></div>
+        <div class="activity-dot-{{timelineData.color}}"></div>
+        <div class="flex-grow-1">
+          <p class="todo-font">
+            <span class="font-{{timelineData.color}}">{{timelineData.date}}</span
+            >{{timelineData.time}}
+            <span class="badge badge-secondary ms-2">{{timelineData.ext}}</span>
+          </p>
+          <span class="f-w-700">{{timelineData.update}}</span>
+          <p class="mb-0">{{timelineData.info}}</p>
+          @for(timelineimag of timelineData.image; track timelineimag ){ @if(timelineData.image){
+          <ul class="img-wrapper">
+            <li><img class="img-30 img-fluid" src="{{timelineimag.img1}}" alt="" /></li>
+            <li><img class="img-fluid" src="{{timelineimag.img2}}" alt="" /></li>
+          </ul>
+          } }
+        </div>
+        <i class="fa fa-circle circle-dot-primary pull-right"></i>
+      </div>
+      }
+    </div>
+  </div>
+</div>

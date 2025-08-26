@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-xl-12 col-lg-6">
+    <div class="card deal-open">
+      <div class="card-header pb-0">
+        <div class="header-top">
+          <h3 class="m-0">Deal Open</h3>
+          <div class="card-header-right"></div>
+        </div>
+      </div>
+      <div class="card-body">
+        <ul class="theme-scrollbar">
+          @for(dealData of dealopenData; track dealData){
+          <li class="d-flex align-items-center">
+            <img src="{{dealData.image}}" alt="" /><a class="ms-2" href="javascript:void(0)">
+              <h5>{{dealData.name}}</h5>
+              <span>{{dealData.info}}</span>
+            </a>
+            <div class="flex-grow-1 ms-2">
+              <h5>Clossing Date</h5>
+              <span>{{dealData.date}}</span>
+            </div>
+            <div class="flex-shrink-0 ms-2">
+              <h5>{{dealData.amount}}</h5>
+              <button class="btn bg-light-primary txt-primary">Contract Sent</button>
+            </div>
+          </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-12 col-lg-6">
+    <app-customer></app-customer>
+  </div>
+</div>

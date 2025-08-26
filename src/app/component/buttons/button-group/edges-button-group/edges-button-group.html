@@ -1,0 +1,20 @@
+<div class="card">
+  <div class="card-header card-no-border pb-0">
+    <h3>Edges button group</h3>
+  </div>
+  <div class="card-body btn-group-showcase">
+    <div class="row">
+      @for(button of edgegroupData; track button){
+      <div class="col-xl-4 col-md-6 col-sm-12">
+        <div class="btn-group btn-group-pill">
+          @for(edgebuttonsitem of button.item; track edgebuttonsitem){
+          <button class="btn {{ edgebuttonsitem.class }}" type="button">
+            {{ edgebuttonsitem.text }}
+          </button>
+          }
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>

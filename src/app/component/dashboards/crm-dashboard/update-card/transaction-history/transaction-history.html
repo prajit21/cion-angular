@@ -1,0 +1,53 @@
+<div class="card">
+  <div class="card-header">
+    <h3>Transaction History</h3>
+  </div>
+  <div class="card-body pt-0 transaction">
+    <div class="table-responsive theme-scrollbar">
+      <table class="table display" id="transaction-history" style="width: 100%">
+        <thead>
+          <tr>
+            <th>Product Name</th>
+            <th>Date and time</th>
+            <th>Amount</th>
+            <th>Invoice</th>
+            <th>Status</th>
+            <th>Payment</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for(transaction of transactionHistory; track transaction){
+          <tr>
+            <td>
+              <div class="d-flex align-items-center">
+                <img src="{{transaction.Image}}" alt="" />
+                <div class="flex-grow-1 ms-2">
+                  <a href="javascript:void(0)">
+                    <h5>{{transaction.name}}</h5>
+                    <span>{{transaction.itemstatus}}</span>
+                  </a>
+                </div>
+              </div>
+            </td>
+            <td>
+              <p>{{transaction.dateandtime}}</p>
+            </td>
+            <td>
+              <h5>{{transaction.amount}}</h5>
+            </td>
+            <td>
+              <p>{{transaction.invoice}}</p>
+            </td>
+            <td>
+              <p class="font-{{transaction.color}}">{{transaction.status}}</p>
+            </td>
+            <td>
+              <p>{{transaction.payment}}</p>
+            </td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

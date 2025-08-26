@@ -1,0 +1,29 @@
+<div class="small-chart-widget chart-widgets-small">
+  <div class="card">
+    <div class="card-header">
+      <h3>Monthly Sales</h3>
+      <div class="card-header-right"></div>
+    </div>
+    <div class="card-body">
+      <div class="chart-container">
+        <div class="row">
+          <div class="col-12">
+            <div id="chart-widget8">
+              <apx-chart
+                [series]="monthlySalesData.series"
+                [chart]="monthlySalesData.chart"
+                [labels]="monthlySalesData.labels"
+                [markers]="monthlySalesData.markers"
+                [title]="monthlySalesData.title"
+                [fill]="monthlySalesData.fill"
+                [stroke]="monthlySalesData.stroke"
+                [colors]="monthlySalesData.colors"
+              >
+              </apx-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

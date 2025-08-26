@@ -1,0 +1,35 @@
+<div class="currency-widget success height-equal widget-currency">
+  <div class="d-flex">
+    <div class="currency-icon-widget">
+      <svg>
+        <use attr.xlink:href="assets/svg/icon-sprite.svg#{{data()?.icon}}"></use>
+      </svg>
+    </div>
+    <div>
+      <h6>{{ data()?.name }}<span class="f-light">{{ data()?.type }}</span></h6>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <div class="currency-chart-wrap">
+        <div id="currency-chart2">
+          <apx-chart
+            [series]="data()!.series"
+            [chart]="data()!.chart"
+            [grid]="data()!.grid"
+            [stroke]="data()!.stroke"
+            [markers]="data()!.markers"
+            [xaxis]="data()!.xaxis"
+            [yaxis]="data()!.yaxis"
+            [legend]="data()!.legend"
+            [responsive]="data()!.responsive"
+            [tooltip]="data()!.tooltip"
+            [labels]="data()!.labels"
+            [colors]="data()!.colors"
+          >
+          </apx-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

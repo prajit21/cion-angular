@@ -1,0 +1,17 @@
+<div class="row">
+  @for( faqData of data(); track data()){
+  <div class="col-xl-4 box-col-4 {{ faqData.colClass }}">
+    <div class="card bg-primary">
+      <div class="card-body">
+        <div class="d-flex faq-widgets">
+          <div class="flex-grow-1">
+            <h3>{{faqData.title}}</h3>
+            <p>{{faqData.desc}}</p>
+          </div>
+          <app-feather-icon [icon]="faqData.icon"></app-feather-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+  }
+</div>

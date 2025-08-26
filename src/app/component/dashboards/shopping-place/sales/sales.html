@@ -1,0 +1,43 @@
+<div class="card total-earning">
+  <div class="card-body">
+    <div class="row">
+      @for( salesitem of salesData; track salesitem ){
+      <div class="col-sm-7 box-col-7">
+        <div class="d-flex">
+          <div class="badge bg-light-dark badge-rounded font-primary me-2">
+            <svg>
+              <use href="assets/svg/icon-sprite.svg#fill-Buy"></use>
+            </svg>
+          </div>
+          <div class="flex-grow-1">
+            <h3>{{salesitem.title}}</h3>
+          </div>
+        </div>
+        <h5>{{salesitem.price}}</h5>
+        <p class="d-flex">
+          <span class="bg-light-dark me-2">
+            <svg>
+              <use href="assets/svg/icon-sprite.svg#arrow-up"></use>
+            </svg> </span
+          ><span class="font-dark me-2">{{salesitem.percentage}}</span
+          ><span>{{salesitem.time}}</span>
+        </p>
+      </div>
+      }
+      <div class="col-sm-5 box-col-5">
+        <div id="totalLikesAreaChart">
+          <apx-chart
+            [series]="saleschartData.series"
+            [chart]="saleschartData.chart"
+            [stroke]="saleschartData.stroke"
+            [dataLabels]="saleschartData.dataLabels"
+            [fill]="saleschartData.fill"
+            [colors]="saleschartData.colors"
+            [responsive]="saleschartData.responsive"
+          >
+          </apx-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

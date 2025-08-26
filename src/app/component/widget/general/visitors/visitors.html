@@ -1,0 +1,35 @@
+<div class="card visitor-card">
+  <div class="card-header card-no-border pb-0">
+    <div class="header-top">
+      <h3 class="m-0">
+        Visitors<span class="f-14 font-primary f-w-600 ms-1">
+          <svg class="svg-fill me-1">
+            <use href="assets/svg/icon-sprite.svg#user-visitor"></use></svg
+          >(+2.8)
+        </span>
+      </h3>
+      <div class="card-header-right-icon"></div>
+    </div>
+  </div>
+  <div class="card-body pt-0">
+    <div class="visitors-container">
+      <div id="visitor-chart">
+        <apx-chart
+          [series]="vistorsData.series"
+          [chart]="vistorsData.chart"
+          [plotOptions]="vistorsData.plotOptions"
+          [dataLabels]="vistorsData.dataLabels"
+          [grid]="vistorsData.grid"
+          [stroke]="vistorsData.stroke"
+          [fill]="vistorsData.fill"
+          [xaxis]="vistorsData.xaxis"
+          [yaxis]="vistorsData.yaxis"
+          [legend]="vistorsData.legend"
+          [responsive]="vistorsData.responsive"
+          [colors]="vistorsData.colors"
+        >
+        </apx-chart>
+      </div>
+    </div>
+  </div>
+</div>

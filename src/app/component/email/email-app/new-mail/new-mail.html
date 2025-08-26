@@ -1,0 +1,44 @@
+<div class="email-compose">
+  <div class="email-top compose-border">
+    <div class="row">
+      <div class="col-sm-8 xl-50">
+        <h3 class="mb-0">New Message</h3>
+      </div>
+      <div class="col-sm-4 btn-middle xl-50">
+        <button
+          class="btn btn-primary btn-block btn-mail text-center mb-0 mt-0 w-100"
+          type="button"
+        >
+          <i class="fa fa-paper-plane me-2"></i> SEND
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="email-wrapper">
+    <form class="theme-form">
+      <div class="mb-3">
+        <label class="col-form-label pt-0" for="exampleInputEmail1">To</label>
+        <input class="form-control" name="first" id="exampleInputEmail1" />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1">Subject</label>
+        <input class="form-control" name="first" id="exampleInputPassword1" type="text" />
+      </div>
+      <div>
+        <label class="text-muted">Message</label>
+        <div class="card-body">
+          <div class="NgxEditor__Wrapper">
+            <ngx-editor-menu [editor]="editor"></ngx-editor-menu>
+            <ngx-editor
+              [editor]="editor"
+              [(ngModel)]="html"
+              [disabled]="false"
+              [placeholder]="'Type here...'"
+              name="html"
+            ></ngx-editor>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

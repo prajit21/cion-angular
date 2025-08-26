@@ -1,0 +1,44 @@
+<div class="card total-earning">
+  <div class="card-body">
+    <div class="row">
+      @for(visitorDataitem of visitorData; track visitorDataitem ){
+      <div class="col-sm-7 box-col-7">
+        <div class="d-flex">
+          <div class="badge bg-light-secondary badge-rounded font-primary me-2">
+            <svg>
+              <use href="assets/svg/icon-sprite.svg#user"></use>
+            </svg>
+          </div>
+          <div class="flex-grow-1">
+            <h3>{{visitorDataitem.title}}</h3>
+          </div>
+        </div>
+        <h5>{{visitorDataitem.price}}</h5>
+        <p class="d-flex">
+          <span class="bg-light-secondary me-2">
+            <svg>
+              <use href="assets/svg/icon-sprite.svg#arrow-down"></use>
+            </svg>
+          </span>
+          <span class="font-secondary me-2">{{visitorDataitem.percentage}}</span
+          ><span>{{visitorDataitem.time}}</span>
+        </p>
+      </div>
+      }
+      <div class="col-sm-5 box-col-5 incom-chart">
+        <div id="Incomechrt">
+          <apx-chart
+            [series]="incomechartData.series"
+            [chart]="incomechartData.chart"
+            [stroke]="incomechartData.stroke"
+            [plotOptions]="incomechartData.plotOptions"
+            [grid]="incomechartData.grid"
+            [colors]="incomechartData.colors"
+            [labels]="incomechartData.labels"
+          >
+          </apx-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

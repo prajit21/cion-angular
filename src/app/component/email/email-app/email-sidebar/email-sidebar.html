@@ -1,0 +1,151 @@
+<div class="row">
+  <div class="col-xl-3 box-col-30">
+    <div class="md-sidebar">
+      <a class="btn btn-primary md-sidebar-toggle" href="javascript:void(0)" (click)="openMenu()"
+        >email filter</a
+      >
+      <div class="md-sidebar-aside job-left-aside theme-scrollbar" [class.open]="open">
+        <div class="email-left-aside">
+          <div class="card">
+            <div class="card-body">
+              <div class="email-app-sidebar">
+                <div class="d-flex">
+                  <div class="media-size-email">
+                    <img class="me-3 rounded-circle" src="assets/images/user/user.png" alt="" />
+                  </div>
+                  <div class="flex-grow-1">
+                    <h3 class="f-w-600">MARKJENCO</h3>
+                    <p>Markjecno&#64;gmail.com</p>
+                  </div>
+                </div>
+                <ul class="nav main-menu theme-scrollbar" role="tablist">
+                  <li class="nav-item">
+                    <a
+                      class="btn-primary btn-block btn-mail w-100"
+                      id="pills-darkhome-tab"
+                      [ngClass]="{'active show': openTab === 'new-mail'}"
+                      (click)="tabbed('new-mail')"
+                    >
+                      <i class="icofont icofont-envelope me-2"></i> NEW MAIL</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="show"
+                      id="pills-darkprofile-tab"
+                      [ngClass]="{'active show': openTab === 'inbox'}"
+                      (click)="tabbed('inbox')"
+                    >
+                      <span class="title"> <i class="icon-import"></i> Inbox</span>
+                      <span class="badge pull-right">(236)</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)"
+                      ><span class="title"><i class="icon-folder"></i> All mail</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)"
+                      ><span class="title"><i class="icon-new-window"></i> Sent</span
+                      ><span class="badge pull-right">(69)</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)"
+                      ><span class="title"><i class="icon-pencil-alt"></i> DRAFT</span
+                      ><span class="badge pull-right">(59)</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)"
+                      ><span class="title"><i class="icon-trash"></i> TRASH</span
+                      ><span class="badge pull-right">(99)</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)"
+                      ><span class="title"><i class="icon-info-alt"></i> IMPORTANT</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)"
+                      ><span class="title"><i class="icon-star"></i> Starred</span></a
+                    >
+                  </li>
+                  <li>
+                    <hr />
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)"
+                      ><span class="title"><i class="icon-email"></i> UNREAD</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)"
+                      ><span class="title"><i class="icon-export"></i> SPAM</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)"
+                      ><span class="title"><i class="icon-share"></i> OUTBOX</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)"
+                      ><span class="title"><i class="icon-file"></i> UPDATE</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)"
+                      ><span class="title"><i class="icon-bell"></i> ALERT</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)"
+                      ><span class="title"><i class="icon-notepad"></i> NOTES</span
+                      ><span class="badge pull-right">(20)</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-9 box-col-80">
+    <div class="email-right-aside">
+      <div class="card email-body">
+        <div class="row">
+          <div class="col-xl-4 col-md-12 box-md-12 pr-0">
+            <app-email-user></app-email-user>
+          </div>
+          <div class="col-xl-8 col-md-12 box-md-12 pl-0">
+            <div class="email-body radius-left">
+              <div class="ps-0">
+                <div class="tab-content">
+                  <div
+                    class="tab-pane fade show"
+                    id="pills-darkhome"
+                    [ngClass]="{'show active': openTab === 'new-mail'}"
+                  >
+                    <app-new-mail></app-new-mail>
+                  </div>
+                  <div
+                    class="tab-pane fade show active"
+                    id="pills-darkprofile"
+                    [ngClass]="{'show active': openTab === 'inbox'}"
+                  >
+                    <app-inbox></app-inbox>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

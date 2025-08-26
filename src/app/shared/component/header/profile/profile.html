@@ -1,0 +1,42 @@
+<div class="d-flex align-items-center profile-media">
+  <img class="b-r-25" src="assets/images/dashboard/profile.png" alt="" />
+  <div class="flex-grow-1 user">
+    <span>Helen Walter</span>
+    <p class="mb-0 font-nunito">
+      Admin
+      <svg>
+        <use href="assets/svg/icon-sprite.svg#header-arrow-down"></use>
+      </svg>
+    </p>
+  </div>
+</div>
+<ul class="profile-dropdown onhover-show-div">
+  <li>
+    <a [routerLink]="'/user/users-profile'">
+      <app-feather-icon [icon]="'user'"></app-feather-icon><span>Account </span>
+    </a>
+  </li>
+  <li>
+    <a [routerLink]="'/email/email-app'">
+      <app-feather-icon [icon]="'mail'"></app-feather-icon><span>Inbox</span>
+    </a>
+  </li>
+  <li>
+    <a [routerLink]="'/task'">
+      <app-feather-icon [icon]="'file-text'"></app-feather-icon>
+      <span>Taskboard</span>
+    </a>
+  </li>
+  <li>
+    <a [routerLink]="'/user/users-edit'">
+      <app-feather-icon [icon]="'settings'"></app-feather-icon>
+      <span>Settings</span>
+    </a>
+  </li>
+  <li>
+    <a (click)="logOut()">
+      <app-feather-icon [icon]="'log-in'"></app-feather-icon>
+      <span>Log in</span>
+    </a>
+  </li>
+</ul>
