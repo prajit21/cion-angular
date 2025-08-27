@@ -1,23 +1,4 @@
 import {
-  ApexNonAxisChartSeries,
-  ApexPlotOptions,
-  ApexChart,
-  ApexLegend,
-  ApexResponsive,
-  ApexStroke,
-  ApexXAxis,
-  ApexYAxis,
-  ApexFill,
-  ApexDataLabels,
-  ApexAxisChartSeries,
-  ApexMarkers,
-  ApexTheme,
-  ApexTitleSubtitle,
-  ApexAnnotations,
-  ApexGrid,
-} from 'ng-apexcharts';
-
-import {
   AverageProfitOptions,
   AverageSalesChartOptions,
   DataChartOptions,
@@ -30,32 +11,6 @@ import {
   VisitorsChartOptions,
   WidgetChartOptions,
 } from '../../../../interface/widgets/chart';
-
-export interface ChartOptions {
-  series?: ApexAxisChartSeries;
-  chart?: ApexChart;
-  xaxis?: ApexXAxis;
-  stroke?: ApexStroke;
-  tooltip?: string[];
-  dataLabels?: ApexDataLabels;
-  yaxis?: ApexYAxis;
-  legend?: ApexLegend;
-  labels?: string[];
-  plotOptions?: ApexPlotOptions;
-  fill?: ApexFill;
-  responsive?: ApexResponsive[];
-  pieseries?: ApexNonAxisChartSeries;
-  title?: ApexTitleSubtitle;
-  theme?: ApexTheme;
-  colors?: string[];
-  markers?: ApexMarkers;
-  annotations?: ApexAnnotations;
-  grid?: ApexGrid;
-  formatter?: Function;
-  widgetYseries?: string[];
-  label?: string[];
-  color?: string[];
-}
 
 export interface socialMedia {
   color: string[];

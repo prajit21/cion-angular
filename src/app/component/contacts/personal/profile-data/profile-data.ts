@@ -26,25 +26,27 @@ export class ProfileData {
   public statusData: contactData;
   readonly selectedSubId = input<number>();
   readonly status = input<boolean>();
+  @Input() lastData: lastDataList;
 
   readonly getTitleData = input<contactData>();
   readonly TaskData = input<contactData>();
-  readonly lastData = input<lastDataList | undefined>();
 
   readonly PrintModal = viewChild<Print>('printModal');
 
   private modalService = inject(NgbModal);
-  public currentLastData = signal<lastDataList | null>(null);
 
   readonly printModal = viewChild.required<Print>('printModal');
 
   ngOnInit() {
-    this.Personal.forEach(data => {
+    this.Personal.map(data => {
       if (data.status) {
         this.statusData = data;
-        const currentData = data.data.filter(d => d.status === true);
-        this.currentLastData.set(currentData[0]);
       }
+      const listnewData = this.statusData.data;
+      const currentData = listnewData.filter((data: { status: boolean }) => {
+        return data.status === true;
+      });
+      this.lastData = currentData[0];
     });
   }
 
@@ -63,12 +65,6 @@ export class ProfileData {
 
   printContact() {
     this.modalService.open(Print);
-  }
-
-  openPrintModal() {
-    if (this.lastData()) {
-      this.printModal().openModal(this.lastData()!);
-    }
   }
 
   deleteContact() {
