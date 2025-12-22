@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-vertical',
-  imports: [],
+  imports: [NgbDropdownModule],
   templateUrl: './vertical.html',
   styleUrls: ['./vertical.scss'],
 })
