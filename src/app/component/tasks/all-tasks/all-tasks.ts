@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { Component, SimpleChanges, input } from '@angular/core';
 
 import * as data from '../../../shared//data/component/tasks/task-list';
@@ -7,7 +7,7 @@ import { Tasklist } from '../../../shared/data/component/tasks/task-list';
 
 @Component({
   selector: 'app-all-tasks',
-  imports: [Feathericon, CommonModule],
+  imports: [Feathericon, NgClass],
   templateUrl: './all-tasks.html',
   styleUrls: ['./all-tasks.scss'],
 })

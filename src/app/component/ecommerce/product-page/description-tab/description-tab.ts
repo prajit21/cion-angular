@@ -1,9 +1,9 @@
-import { CommonModule } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-description-tab',
-  imports: [CommonModule],
+  imports: [NgClass],
   templateUrl: './description-tab.html',
   styleUrls: ['./description-tab.scss'],
 })

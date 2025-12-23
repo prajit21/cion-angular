@@ -1,23 +1,21 @@
-import { Directive, HostBinding, HostListener, Input, input, output, signal } from '@angular/core';
+import { Directive, HostBinding, HostListener, input, output, signal } from '@angular/core';
 
 import { productList } from '../interface/product-list';
 
 export type SortColumn = keyof productList | '';
 export type SortDirection = 'asc' | 'desc' | '';
-const rotate: { [key: string]: SortDirection } = { asc: 'desc', desc: '', '': 'asc' };
+const rotate: Record<SortDirection, SortDirection> = { asc: 'desc', desc: '', '': 'asc' };
 
 export interface SortEvent {
   column: SortColumn;
   direction: SortDirection;
 }
+
+
 @Directive({
   selector: 'th[sortable]',
-  standalone: true,
-  host: {
-    '[class.asc]': 'direction === "asc"',
-    '[class.desc]': 'direction === "desc"',
-    '(click)': 'rotate()',
-  },
+  standalone: true
+
 })
 export class ProductListDirective {
   readonly sortable = input<SortColumn>('');

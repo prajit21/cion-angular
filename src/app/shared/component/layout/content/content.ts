@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { Component, HostListener, inject } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 
@@ -15,7 +15,7 @@ import { Sidebar } from '../../sidebar/sidebar';
 
 @Component({
   selector: 'app-content',
-  imports: [Header, Breadcrumb, Footer, Customizer, CommonModule, RouterModule, Sidebar],
+  imports: [Header, Breadcrumb, Footer, Customizer, RouterModule, Sidebar, NgClass],
   templateUrl: './content.html',
   styleUrls: ['./content.scss'],
 })

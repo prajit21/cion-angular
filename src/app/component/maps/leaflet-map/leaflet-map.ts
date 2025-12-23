@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 
 import { LeafletModule } from '@bluehalo/ngx-leaflet';
@@ -6,7 +6,7 @@ import * as L from 'leaflet';
 
 @Component({
   selector: 'app-leaflet-map',
-  imports: [CommonModule, LeafletModule],
+  imports: [LeafletModule],
   templateUrl: './leaflet-map.html',
   styleUrls: ['./leaflet-map.scss'],
 })

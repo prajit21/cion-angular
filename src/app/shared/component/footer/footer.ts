@@ -1,11 +1,10 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, inject } from '@angular/core';
 
 import { NavservicesService } from '../../services/nav/navservices.service';
 
 @Component({
   selector: 'app-footer',
-  imports: [CommonModule],
   templateUrl: './footer.html',
   styleUrls: ['./footer.scss'],
 })
@@ -15,6 +14,8 @@ export class Footer {
   public footerDark = false;
 
   public navService = inject(NavservicesService);
+
+  public currentYear = new Date().getFullYear();
 
   ngDoCheck() {
     if (window.location.pathname == '/page-layout/footer-dark') {

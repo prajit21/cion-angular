@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
@@ -8,7 +8,7 @@ import { Project } from '../../../shared/interface/product-list';
 
 @Component({
   selector: 'app-project-list',
-  imports: [Feathericon, RouterModule, CommonModule],
+  imports: [Feathericon, RouterModule, NgClass],
   templateUrl: './project-list.html',
   styleUrls: ['./project-list.scss'],
 })

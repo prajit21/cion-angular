@@ -5,15 +5,19 @@ import { Directive, ElementRef, HostListener, inject, output } from '@angular/co
   standalone: true,
 })
 export class ClickOutsideDirective {
-  readonly clickOutside = output<Event>();
-  private elementRef = inject(ElementRef);
+  readonly clickOutside = output<MouseEvent>();
+  private elementRef = inject(ElementRef<HTMLElement>);
 
-  @HostListener('document:click', ['$event', '$event.target'])
-  onClick(event: MouseEvent, targetElement: HTMLElement): void {
-    if (!targetElement) {
+  @HostListener('document:click', ['$event'])
+  onClick(event: MouseEvent): void {
+    const target = event.target;
+
+    if (!(target instanceof HTMLElement)) {
       return;
     }
-    const clickedInside = this.elementRef.nativeElement.contains(targetElement);
+
+    const clickedInside = this.elementRef.nativeElement.contains(target);
+
     if (!clickedInside) {
       this.clickOutside.emit(event);
     }

@@ -1,11 +1,10 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, inject, TemplateRef } from '@angular/core';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-open-modal-for-cion',
-  imports: [CommonModule],
   templateUrl: './open-modal-for-cion.html',
   styleUrls: ['./open-modal-for-cion.scss'],
 })

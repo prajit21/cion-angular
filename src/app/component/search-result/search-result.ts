@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 
 import { All } from './all/all';
@@ -10,7 +10,7 @@ import { Videos } from './videos/videos';
 
 @Component({
   selector: 'app-search-result',
-  imports: [All, Images, Videos, Audios, Settings, CommonModule, Tools],
+  imports: [All, Images, Videos, Audios, Settings, Tools, NgClass],
   templateUrl: './search-result.html',
   styleUrls: ['./search-result.scss'],
 })

@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, inject, TemplateRef } from '@angular/core';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -7,7 +7,7 @@ import { Feathericon } from '../../../../../shared/component/feathericon/feather
 
 @Component({
   selector: 'app-simple-modal',
-  imports: [CommonModule, Feathericon],
+  imports: [Feathericon],
   templateUrl: './simple-modal.html',
   styleUrls: ['./simple-modal.scss'],
 })

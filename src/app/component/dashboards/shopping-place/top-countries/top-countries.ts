@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 
 import { LeafletModule } from '@bluehalo/ngx-leaflet';
@@ -8,7 +8,7 @@ import { contriesdetils } from '../../../../shared/data/component/deshboard/shop
 
 @Component({
   selector: 'app-top-countries',
-  imports: [LeafletModule, CommonModule],
+  imports: [LeafletModule],
   templateUrl: './top-countries.html',
   styleUrls: ['./top-countries.scss'],
 })

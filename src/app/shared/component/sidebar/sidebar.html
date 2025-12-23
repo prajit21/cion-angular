@@ -32,7 +32,7 @@
           </a>
           <ul
             class="sidebar-submenu theme-scrollbar"
-            [ngStyle]="{ 'display' : mainMenu.active && mainMenu.type !== 'link'? 'block' : 'none' }"
+            [style.display]="mainMenu.active && mainMenu.type !== 'link'? 'block' : 'none'"
           >
             <li class="sidebar-head">{{ mainMenu.headTitle1! | translate }}</li>
             <div *ngTemplateOutlet="recursiveMenu; context: { $implicit: mainMenu.item }"></div>
@@ -57,7 +57,7 @@
                 @if(item.children){
                 <ul
                   class="submenu-wrapper"
-                  [ngStyle]="{ 'display' : item.active ? 'block' : 'none'}"
+                  [style.display]="item.active ? 'block' : 'none'"
                 >
                   @for( child of item.children; track child){
                   <li>
@@ -86,7 +86,7 @@
                     } @if(child.children){
                     <ul
                       class="nav-sub-childmenu submenu-content"
-                      [ngStyle]="{ 'display' : child.active ? 'block' : 'none' }"
+                      [style.display]="child.active ? 'block' : 'none'"
                     >
                       @for( sub of child.children; track sub){
                       <li>

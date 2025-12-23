@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, HostListener, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -6,7 +6,7 @@ import { LayoutService } from '../../../services/layout/layout.service';
 
 @Component({
   selector: 'app-quick-option',
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule],
   templateUrl: './quick-option.html',
   styleUrls: ['./quick-option.scss'],
 })
@@ -48,8 +48,12 @@ export class QuickOption {
   }
 
   @HostListener('window:resize', ['$event'])
-  onResize(event: { target: { innerWidth: number } }) {
-    this.screenwidth = event.target.innerWidth;
+  onResize(event: UIEvent): void {
+    const target = event.target;
+
+    if (target === window) {
+      this.screenwidth = window.innerWidth;
+    }
   }
 
   svgIcon(val: string) {

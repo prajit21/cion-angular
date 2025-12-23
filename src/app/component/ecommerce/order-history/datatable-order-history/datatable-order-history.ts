@@ -1,4 +1,4 @@
-import { CommonModule, DecimalPipe } from '@angular/common';
+import { DecimalPipe, AsyncPipe } from '@angular/common';
 import { Component, inject, viewChildren } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -16,12 +16,12 @@ import { OrderService } from '../../../../shared/services/ecommerce/order.servic
   selector: 'app-datatable-order-history',
   imports: [
     RouterModule,
-    CommonModule,
     FormsModule,
     OdersdataDirective,
     Feathericon,
     NgbPaginationModule,
-  ],
+    AsyncPipe
+],
   templateUrl: './datatable-order-history.html',
   styleUrls: ['./datatable-order-history.scss'],
   providers: [OrderService, DecimalPipe],

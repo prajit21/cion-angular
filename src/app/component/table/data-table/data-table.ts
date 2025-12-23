@@ -1,4 +1,4 @@
-import { CommonModule, DecimalPipe } from '@angular/common';
+import { DecimalPipe, AsyncPipe } from '@angular/common';
 import { Component, inject, viewChildren } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -15,12 +15,13 @@ import { TableService } from '../../../shared/services/table/table.service';
 @Component({
   selector: 'app-data-table',
   imports: [
-    CommonModule,
     FormsModule,
     NgbdSortableHeaderDirective,
     NgbPaginationModule,
     NgbTypeaheadModule,
-  ],
+    AsyncPipe,
+    DecimalPipe
+],
   templateUrl: './data-table.html',
   styleUrls: ['./data-table.scss'],
   providers: [TableService, DecimalPipe],

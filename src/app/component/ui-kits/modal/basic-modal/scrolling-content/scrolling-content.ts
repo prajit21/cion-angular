@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, inject, TemplateRef } from '@angular/core';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -8,7 +8,7 @@ import { ModalData } from '../../../../../shared/data/component/ui-kits/modal/mo
 
 @Component({
   selector: 'app-scrolling-content',
-  imports: [CommonModule, Feathericon],
+  imports: [Feathericon],
   templateUrl: './scrolling-content.html',
   styleUrls: ['./scrolling-content.scss'],
 })

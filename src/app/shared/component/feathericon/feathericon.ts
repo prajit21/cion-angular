@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -6,7 +6,7 @@ import * as feather from 'feather-icons';
 
 @Component({
   selector: 'app-feather-icon',
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule],
   templateUrl: './feathericon.html',
   styleUrls: ['./feathericon.scss'],
 })

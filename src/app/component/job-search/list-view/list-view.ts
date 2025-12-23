@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { SlicePipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 
 import { NgbRatingConfig, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
@@ -8,7 +8,7 @@ import { JobFilter } from '../job-filter/job-filter';
 
 @Component({
   selector: 'app-list-view',
-  imports: [JobFilter, NgbRatingModule, CommonModule],
+  imports: [JobFilter, NgbRatingModule, SlicePipe],
   templateUrl: './list-view.html',
   styleUrls: ['./list-view.scss'],
 })

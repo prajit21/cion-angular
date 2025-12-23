@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { NgClass, NgTemplateOutlet } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -11,7 +11,7 @@ import { SvgIcon } from '../svg-icon/svg-icon';
 
 @Component({
   selector: 'app-sidebar',
-  imports: [RouterModule, SvgIcon, CommonModule, FormsModule, TranslateModule],
+  imports: [RouterModule, SvgIcon, FormsModule, TranslateModule, NgClass, NgTemplateOutlet],
   templateUrl: './sidebar.html',
   styleUrls: ['./sidebar.scss'],
 })

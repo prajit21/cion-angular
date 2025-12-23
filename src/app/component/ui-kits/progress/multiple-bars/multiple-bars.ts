@@ -1,11 +1,10 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 
 import { Multiplebars } from '../../../../shared/data/component/ui-kits/progressbar/progress';
 
 @Component({
   selector: 'app-multiple-bars',
-  imports: [CommonModule],
   templateUrl: './multiple-bars.html',
   styleUrls: ['./multiple-bars.scss'],
 })

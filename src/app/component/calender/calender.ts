@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { JsonPipe } from '@angular/common';
 import { Component, inject, TemplateRef, viewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -41,7 +41,7 @@ const colors: Record<string, EventColor> = {
 
 @Component({
   selector: 'app-calender',
-  imports: [CommonModule, FlatpickrModule, CalendarModule, FormsModule],
+  imports: [FlatpickrModule, CalendarModule, FormsModule, JsonPipe],
   templateUrl: './calender.html',
   styleUrls: ['./calender.scss'],
 })

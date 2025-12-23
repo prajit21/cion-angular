@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 
 import { About } from '../about/about';
@@ -8,7 +8,7 @@ import { TimeLine } from '../time-line/time-line';
 
 @Component({
   selector: 'app-profile',
-  imports: [CommonModule, TimeLine, About, Friends, Photos],
+  imports: [TimeLine, About, Friends, Photos, NgClass],
   templateUrl: './profile.html',
   styleUrls: ['./profile.scss'],
 })

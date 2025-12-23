@@ -1,4 +1,4 @@
-import { CommonModule, DecimalPipe } from '@angular/common';
+import { DecimalPipe, AsyncPipe, NgClass } from '@angular/common';
 import { Component, inject, viewChildren } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -14,7 +14,7 @@ import { SupportTicketService } from '../../../shared/services/support-ticket/su
 
 @Component({
   selector: 'app-support-ticket-data-table',
-  imports: [NgbdSortableHeader2Directive, FormsModule, CommonModule, NgbPaginationModule],
+  imports: [NgbdSortableHeader2Directive, FormsModule, NgbPaginationModule, AsyncPipe, DecimalPipe, NgClass],
   providers: [DecimalPipe, SupportTicketService],
   templateUrl: './support-ticket-data-table.html',
   styleUrls: ['./support-ticket-data-table.scss'],

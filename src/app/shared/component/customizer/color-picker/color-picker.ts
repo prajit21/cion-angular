@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -6,7 +6,7 @@ import { LayoutService } from '../../../services/layout/layout.service';
 
 @Component({
   selector: 'app-color-picker',
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule],
   templateUrl: './color-picker.html',
   styleUrls: ['./color-picker.scss'],
 })

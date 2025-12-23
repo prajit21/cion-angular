@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { Component, SimpleChanges, input, viewChild } from '@angular/core';
 
 import { Feathericon } from '../../../shared/component/feathericon/feathericon';
@@ -12,7 +12,7 @@ import { EditBookmark } from '../modal/edit-bookmark/edit-bookmark';
 
 @Component({
   selector: 'app-bookmark-data',
-  imports: [Feathericon, CommonModule, EditBookmark],
+  imports: [Feathericon, EditBookmark, NgClass],
   templateUrl: './bookmark-data.html',
   styleUrls: ['./bookmark-data.scss'],
 })

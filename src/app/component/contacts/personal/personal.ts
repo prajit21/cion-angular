@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { Component, SimpleChanges, input } from '@angular/core';
 
 import { ProfileData } from './profile-data/profile-data';
@@ -6,7 +6,7 @@ import * as data from '../../../shared/data/component/contacts/all-contact';
 
 @Component({
   selector: 'app-personal',
-  imports: [ProfileData, CommonModule],
+  imports: [ProfileData, NgClass],
   templateUrl: './personal.html',
   styleUrls: ['./personal.scss'],
 })

@@ -67,7 +67,7 @@
                     <td class="sorting_1">${{item.amount}}</td>
                     <td
                       class="sorting_1"
-                      [ngClass]="{'font-success' : item.stock === 'In Stock', 'font-danger' : item.stock === 'out of stock', 'font-primary' : item.stock === 'Low Stock'}"
+                      [class]="{'font-success' : item.stock === 'In Stock', 'font-danger' : item.stock === 'out of stock', 'font-primary' : item.stock === 'Low Stock'}"
                     >
                       {{item.stock}}
                     </td>

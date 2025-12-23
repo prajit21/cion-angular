@@ -3,7 +3,7 @@
     <use href="assets/svg/icon-sprite.svg#Buy"></use>
   </svg>
 </div>
-<div class="cart-dropdown onhover-show-div" [ngClass]="{'active' : products === true}">
+<div class="cart-dropdown onhover-show-div" [class.active]="products === true">
   <h6 class="f-18 mb-0 dropdown-title">Cart</h6>
   <ul>
     <li>

@@ -1,8 +1,4 @@
-<div
-  class="tab-content"
-  id="v-pills-tabContent"
-  [ngStyle]="{ 'display': editContact ? 'none' : ''}"
->
+<div class="tab-content" id="v-pills-tabContent" [style.display]="editContact ? 'none' : ''">
   <div class="tab-pane contact-tab-0 tab-content-child fade show active" id="v-pills-user">
     <div class="profile-mail">
       <div class="d-flex align-items-center">
@@ -75,7 +71,7 @@
     </div>
   </div>
 </div>
-<div class="contact-editform" [ngStyle]="{ 'display': !editContact ? 'none' : ''}">
+<div class="contact-editform" [style.display]="!editContact ? 'none' : ''">
   <form>
     <div class="row g-2">
       <app-general [lastData]="lastData"></app-general>

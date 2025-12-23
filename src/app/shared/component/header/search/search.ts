@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { SlicePipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -9,7 +9,7 @@ import { SvgIcon } from '../../svg-icon/svg-icon';
 
 @Component({
   selector: 'app-search',
-  imports: [RouterModule, SvgIcon, FormsModule, CommonModule, ClickOutsideDirective],
+  imports: [RouterModule, SvgIcon, FormsModule, ClickOutsideDirective, SlicePipe],
   templateUrl: './search.html',
   styleUrls: ['./search.scss'],
 })

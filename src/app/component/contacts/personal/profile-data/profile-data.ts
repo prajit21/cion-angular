@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, Input, SimpleChanges, inject, input, signal, viewChild } from '@angular/core';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -13,7 +13,7 @@ import { Print } from '../../modal/print/print';
 
 @Component({
   selector: 'app-profile-data',
-  imports: [General, PersonalContent, AddressContent, CommonModule, Print],
+  imports: [General, PersonalContent, AddressContent, Print],
   templateUrl: './profile-data.html',
   styleUrls: ['./profile-data.scss'],
 })

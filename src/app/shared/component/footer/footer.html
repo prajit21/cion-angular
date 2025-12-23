@@ -2,14 +2,14 @@
   class="footer"
   [class.footer-dark]="footerDark"
   [class.footer-light]="footerLight"
-  [ngStyle]="{ 'margin-left' : navService.isDisplay ? '0' : '100px '}"
-  [ngStyle]="{ 'margin-left' :navService.isShow ? '365px':'100px'}"
+  [style.margin-left]="navService.isDisplay ? '0' : '100px '"
+  [style.margin-left]="navService.isShow ? '365px':'100px'"
   style="z-index: 9"
 >
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-6 footer-copyright">
-        <p class="mb-0">Copyright 2025 © Cion theme by pixelstrap.</p>
+        <p class="mb-0">Copyright {{ currentYear }} © Cion theme by pixelstrap.</p>
       </div>
       <div class="col-md-6">
         <p class="float-end mb-0">

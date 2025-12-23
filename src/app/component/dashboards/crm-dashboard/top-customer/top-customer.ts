@@ -1,11 +1,11 @@
-import { CommonModule } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 
 import { TopCustomers } from '../../../../shared/data/component/deshboard/crm-dashboard';
 
 @Component({
   selector: 'app-top-customer',
-  imports: [CommonModule],
+  imports: [NgClass],
   templateUrl: './top-customer.html',
   styleUrls: ['./top-customer.scss'],
 })

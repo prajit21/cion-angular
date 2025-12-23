@@ -1,9 +1,9 @@
-import { CommonModule } from '@angular/common';
+import { TitleCasePipe } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-outline-color-variant',
-  imports: [CommonModule],
+  imports: [TitleCasePipe],
   templateUrl: './outline-color-variant.html',
   styleUrls: ['./outline-color-variant.scss'],
 })

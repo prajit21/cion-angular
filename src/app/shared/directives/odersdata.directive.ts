@@ -1,10 +1,10 @@
-import { Directive, HostBinding, HostListener, Input, input, output, signal } from '@angular/core';
+import { Directive, HostBinding, HostListener, input, output, signal } from '@angular/core';
 
 import { ORDERS } from '../interface/odershistory';
 
 export type SortColumn = keyof ORDERS | '';
 export type SortDirection = 'asc' | 'desc' | '';
-const rotate: { [key: string]: SortDirection } = { asc: 'desc', desc: '', '': 'asc' };
+const rotate: Record<SortDirection, SortDirection> = { asc: 'desc', desc: '', '': 'asc' };
 
 export interface SortEvent {
   column: SortColumn;
@@ -14,11 +14,6 @@ export interface SortEvent {
 @Directive({
   selector: 'th[orderSortable]',
   standalone: true,
-  host: {
-    '[class.asc]': 'direction === "asc"',
-    '[class.desc]': 'direction === "desc"',
-    '(click)': 'rotate()',
-  },
 })
 export class OdersdataDirective {
   readonly sortableOrder = input<SortColumn>('');

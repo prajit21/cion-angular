@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 
 import { EmailUser } from '../email-user/email-user';
@@ -7,7 +7,7 @@ import { NewMail } from '../new-mail/new-mail';
 
 @Component({
   selector: 'app-email-sidebar',
-  imports: [CommonModule, EmailUser, NewMail, Inbox],
+  imports: [EmailUser, NewMail, Inbox, NgClass],
   templateUrl: './email-sidebar.html',
   styleUrls: ['./email-sidebar.scss'],
 })

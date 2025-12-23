@@ -590,7 +590,53 @@ button[data-toggle='dropdown'] {
     }
   }
 }
+.date-picker {
+  .digits {
+    form {
+      .input-group {
+        ngb-datepicker {
+          transform: unset !important;
+        }
+        &.range-datepicker .dropdown-menu {
+          width: calc(30rem + 0.0025 * (100vw - 320px));
+          z-index: 6;
+        }
+      }
+    }
+  }
+  ngb-datepicker {
+    z-index: 3;
+  }
+  .ngb-dp-navigation-select {
+    gap: 6px;
+  }
+}
+.chart-block,
+.chart-overflow,
+google-chart,
+google-chart > div {
+  width: 100% !important;
+}
 
+.chart-overflow {
+  overflow-x: auto; /* optional */
+}
+.card,
+.card-body,
+.chart-block,
+#bar-chart2,
+google-chart,
+google-chart > div,
+google-chart > div > div {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Kill the 400px inline width */
+google-chart div[dir='ltr'] {
+  width: 100% !important;
+  height: 400px !important; /* adjust height as needed */
+}
 /**=====================
     4.3 Update CSS Ends
 ==========================**/

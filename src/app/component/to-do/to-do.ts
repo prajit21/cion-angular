@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -22,7 +22,7 @@ const Months = [
 
 @Component({
   selector: 'app-to-do',
-  imports: [ToDoFilter, CommonModule, FormsModule],
+  imports: [ToDoFilter, FormsModule, NgClass],
   templateUrl: './to-do.html',
   styleUrls: ['./to-do.scss'],
 })
