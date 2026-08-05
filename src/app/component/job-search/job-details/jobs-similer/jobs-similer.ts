@@ -1,5 +1,5 @@
 import { SlicePipe } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbRatingConfig, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -9,6 +9,7 @@ import { jobCardsData } from '../../../../shared/data/component/job-search/job-s
   selector: 'app-jobs-similer',
   imports: [NgbRatingModule, SlicePipe],
   templateUrl: './jobs-similer.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./jobs-similer.scss'],
 })
 export class JobsSimiler {

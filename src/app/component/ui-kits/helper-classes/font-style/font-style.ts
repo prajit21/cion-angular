@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { FontStyles } from '../../../../shared/data/component/ui-kits/helper-classes/helper-classes';
 
@@ -6,6 +6,7 @@ import { FontStyles } from '../../../../shared/data/component/ui-kits/helper-cla
   selector: 'app-font-style',
   imports: [],
   templateUrl: './font-style.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./font-style.scss'],
 })
 export class FontStyle {

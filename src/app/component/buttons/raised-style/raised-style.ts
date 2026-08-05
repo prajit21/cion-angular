@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -8,6 +8,7 @@ import { raisedButtons, styleButton } from '../../../shared/data/component/butto
   selector: 'app-raised-style',
   imports: [NgbTooltipModule],
   templateUrl: './raised-style.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./raised-style.scss'],
 })
 export class RaisedStyle {

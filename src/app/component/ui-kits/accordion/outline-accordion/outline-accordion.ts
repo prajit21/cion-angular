@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -9,6 +9,7 @@ import { OutlineAccordions } from '../../../../shared/data/component/ui-kits/acc
   selector: 'app-outline-accordion',
   imports: [Feathericon, NgbAccordionModule],
   templateUrl: './outline-accordion.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./outline-accordion.scss'],
 })
 export class OutlineAccordion {

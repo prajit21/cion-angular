@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { Feathericon } from '../../../../../shared/component/feathericon/feathericon';
 import * as data from '../../../../../shared/data/component/social-media/social-media-data';
@@ -8,6 +8,7 @@ import * as data from '../../../../../shared/data/component/social-media/social-
   selector: 'app-comment-two',
   imports: [Feathericon, NgClass],
   templateUrl: './comment-two.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./comment-two.scss'],
 })
 export class CommentTwo {

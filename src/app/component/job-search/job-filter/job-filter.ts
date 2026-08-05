@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -9,6 +9,7 @@ import * as Data from '../../../shared/data/component/job-search/job-search';
   selector: 'app-job-filter',
   imports: [Feathericon, NgbCollapseModule],
   templateUrl: './job-filter.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./job-filter.scss'],
 })
 export class JobFilter {

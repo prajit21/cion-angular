@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
@@ -11,6 +11,7 @@ import {
   selector: 'app-stage-padding-example',
   imports: [CarouselModule],
   templateUrl: './stage-padding-example.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./stage-padding-example.scss'],
 })
 export class StagePaddingExample {

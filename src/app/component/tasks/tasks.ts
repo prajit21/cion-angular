@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { TaskSidemenu } from './task-sidemenu/task-sidemenu';
 
@@ -6,6 +6,7 @@ import { TaskSidemenu } from './task-sidemenu/task-sidemenu';
   selector: 'app-tasks',
   imports: [TaskSidemenu],
   templateUrl: './tasks.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./tasks.scss'],
 })
 export class Tasks {}

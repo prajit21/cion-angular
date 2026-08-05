@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { ContactSidemenu } from './contact-sidemenu/contact-sidemenu';
 
@@ -6,6 +6,7 @@ import { ContactSidemenu } from './contact-sidemenu/contact-sidemenu';
   selector: 'app-contacts',
   imports: [ContactSidemenu],
   templateUrl: './contacts.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./contacts.scss'],
 })
 export class Contacts {}

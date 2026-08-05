@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { CommonCharts } from './common-charts/common-charts';
 import * as totalItemchart from '../../../../shared/data/component/widget/chart/widget-charts';
@@ -7,6 +7,7 @@ import * as totalItemchart from '../../../../shared/data/component/widget/chart/
   selector: 'app-chart-widget',
   imports: [CommonCharts],
   templateUrl: './chart-widget.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./chart-widget.scss'],
 })
 export class ChartWidget {

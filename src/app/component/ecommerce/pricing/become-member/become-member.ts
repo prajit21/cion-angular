@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { BecomeMembers } from '../../../../shared/data/component/e-commerce/pricing';
 
@@ -6,6 +6,7 @@ import { BecomeMembers } from '../../../../shared/data/component/e-commerce/pric
   selector: 'app-become-member',
   imports: [],
   templateUrl: './become-member.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./become-member.scss'],
 })
 export class BecomeMember {

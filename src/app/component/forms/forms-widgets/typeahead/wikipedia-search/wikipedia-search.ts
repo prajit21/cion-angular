@@ -1,5 +1,5 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Component, inject, Injectable } from '@angular/core';
+import { Component, inject, Injectable, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
@@ -43,6 +43,7 @@ export class WikipediaService {
   imports: [NgbTypeaheadModule, FormsModule],
   templateUrl: './wikipedia-search.html',
   styleUrls: ['./wikipedia-search.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   providers: [WikipediaService],
 })
 export class WikipediaSearch {

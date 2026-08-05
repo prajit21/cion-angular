@@ -1,4 +1,4 @@
-import { Component, inject, Output } from '@angular/core';
+import { Component, inject, Output, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -12,6 +12,7 @@ import { NewBookmark } from '../modal/new-bookmark/new-bookmark';
   selector: 'app-side-menu',
   imports: [Feathericon, BookmarkData],
   templateUrl: './side-menu.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./side-menu.scss'],
 })
 export class SideMenu {

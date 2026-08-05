@@ -1,4 +1,4 @@
-import { Component, viewChild } from '@angular/core';
+import { Component, viewChild, ChangeDetectionStrategy } from '@angular/core';
 
 import { LightboxModule } from 'ng-gallery/lightbox';
 import { NgxMasonryComponent, NgxMasonryModule, NgxMasonryOptions } from 'ngx-masonry';
@@ -7,6 +7,7 @@ import { NgxMasonryComponent, NgxMasonryModule, NgxMasonryOptions } from 'ngx-ma
   selector: 'app-masonry-with-desc',
   imports: [LightboxModule, NgxMasonryModule],
   templateUrl: './masonry-with-desc.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./masonry-with-desc.scss'],
 })
 export class MasonryWithDesc {

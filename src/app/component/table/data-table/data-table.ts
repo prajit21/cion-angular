@@ -1,5 +1,5 @@
 import { DecimalPipe, AsyncPipe } from '@angular/common';
-import { Component, inject, viewChildren } from '@angular/core';
+import { Component, inject, viewChildren, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { NgbPaginationModule, NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
@@ -20,10 +20,11 @@ import { TableService } from '../../../shared/services/table/table.service';
     NgbPaginationModule,
     NgbTypeaheadModule,
     AsyncPipe,
-    DecimalPipe
-],
+    DecimalPipe,
+  ],
   templateUrl: './data-table.html',
   styleUrls: ['./data-table.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
   providers: [TableService, DecimalPipe],
 })
 export class DataTable {

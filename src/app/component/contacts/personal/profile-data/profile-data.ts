@@ -1,5 +1,13 @@
-
-import { Component, Input, SimpleChanges, inject, input, signal, viewChild } from '@angular/core';
+import {
+  Component,
+  Input,
+  SimpleChanges,
+  inject,
+  input,
+  signal,
+  viewChild,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import Swal from 'sweetalert2';
@@ -15,6 +23,7 @@ import { Print } from '../../modal/print/print';
   selector: 'app-profile-data',
   imports: [General, PersonalContent, AddressContent, Print],
   templateUrl: './profile-data.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./profile-data.scss'],
 })
 export class ProfileData {

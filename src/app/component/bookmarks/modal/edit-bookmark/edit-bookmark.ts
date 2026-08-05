@@ -1,4 +1,4 @@
-import { Component, inject, TemplateRef, viewChild } from '@angular/core';
+import { Component, inject, TemplateRef, viewChild, ChangeDetectionStrategy } from '@angular/core';
 
 import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -11,6 +11,7 @@ import {
   selector: 'app-edit-bookmark',
   imports: [],
   templateUrl: './edit-bookmark.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./edit-bookmark.scss'],
 })
 export class EditBookmark {

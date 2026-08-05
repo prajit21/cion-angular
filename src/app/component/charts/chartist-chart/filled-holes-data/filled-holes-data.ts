@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { ChartistModule } from 'ng-chartist';
 
@@ -8,6 +8,7 @@ import * as chartData from '../../../../shared/data/component/charts/chartist';
   selector: 'app-filled-holes-data',
   imports: [ChartistModule],
   templateUrl: './filled-holes-data.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./filled-holes-data.scss'],
 })
 export class FilledHolesData {

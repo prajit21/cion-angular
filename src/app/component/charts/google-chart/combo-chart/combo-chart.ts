@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 
@@ -8,6 +8,7 @@ import * as chartData from '../../../../shared/data/component/charts/google-char
   selector: 'app-combo-chart',
   imports: [Ng2GoogleChartsModule],
   templateUrl: './combo-chart.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./combo-chart.scss'],
 })
 export class ComboChart {

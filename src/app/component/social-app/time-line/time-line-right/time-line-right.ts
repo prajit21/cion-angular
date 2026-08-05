@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -12,6 +12,7 @@ import { ProfileIntro } from './profile-intro/profile-intro';
   selector: 'app-time-line-right',
   imports: [NgbAccordionModule, ProfileIntro, Followers, Following, LatestPhotos, FriendsProfile],
   templateUrl: './time-line-right.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./time-line-right.scss'],
 })
 export class TimeLineRight {}

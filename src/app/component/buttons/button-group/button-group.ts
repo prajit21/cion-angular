@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { BasicButton } from './basic-button/basic-button';
 import { CheckBoxButtonGroup } from './check-box-button-group/check-box-button-group';
@@ -34,6 +34,7 @@ import { Vertical } from './vertical/vertical';
     Vertical,
   ],
   templateUrl: './button-group.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./button-group.scss'],
 })
 export class ButtonGroup {}

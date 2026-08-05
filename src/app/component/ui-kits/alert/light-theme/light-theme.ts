@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { lightThemeAlert } from '../../../../shared/data/component/ui-kits/alert/alert';
 
@@ -6,6 +6,7 @@ import { lightThemeAlert } from '../../../../shared/data/component/ui-kits/alert
   selector: 'app-light-theme',
   imports: [],
   templateUrl: './light-theme.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./light-theme.scss'],
 })
 export class LightTheme {

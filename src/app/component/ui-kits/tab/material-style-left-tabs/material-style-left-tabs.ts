@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -6,6 +6,7 @@ import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-material-style-left-tabs',
   imports: [NgbNavModule],
   templateUrl: './material-style-left-tabs.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./material-style-left-tabs.scss'],
 })
 export class MaterialStyleLeftTabs {

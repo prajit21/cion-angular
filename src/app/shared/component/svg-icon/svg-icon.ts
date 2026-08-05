@@ -1,4 +1,4 @@
-import { Component, inject, input } from '@angular/core';
+import { Component, inject, input, ChangeDetectionStrategy } from '@angular/core';
 
 import { LayoutService } from '../../services/layout/layout.service';
 
@@ -6,6 +6,7 @@ import { LayoutService } from '../../services/layout/layout.service';
   selector: 'app-svg-icon',
   imports: [],
   templateUrl: './svg-icon.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./svg-icon.scss'],
 })
 export class SvgIcon {

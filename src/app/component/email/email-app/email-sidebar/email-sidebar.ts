@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { EmailUser } from '../email-user/email-user';
 import { Inbox } from '../inbox/inbox';
@@ -9,6 +9,7 @@ import { NewMail } from '../new-mail/new-mail';
   selector: 'app-email-sidebar',
   imports: [EmailUser, NewMail, Inbox, NgClass],
   templateUrl: './email-sidebar.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./email-sidebar.scss'],
 })
 export class EmailSidebar {

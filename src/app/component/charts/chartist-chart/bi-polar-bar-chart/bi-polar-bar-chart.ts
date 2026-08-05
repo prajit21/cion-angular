@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { ChartistModule } from 'ng-chartist';
 
@@ -8,6 +8,7 @@ import * as chartData from '../../../../shared/data/component/charts/chartist';
   selector: 'app-bi-polar-bar-chart',
   imports: [ChartistModule],
   templateUrl: './bi-polar-bar-chart.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./bi-polar-bar-chart.scss'],
 })
 export class BiPolarBarChart {

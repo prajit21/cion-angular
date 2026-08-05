@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import {
   ActivatedRoute,
   NavigationEnd,
@@ -14,6 +14,7 @@ import { filter } from 'rxjs/operators';
   selector: 'app-breadcrumb',
   imports: [RouterModule],
   templateUrl: './breadcrumb.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./breadcrumb.scss'],
 })
 export class Breadcrumb {

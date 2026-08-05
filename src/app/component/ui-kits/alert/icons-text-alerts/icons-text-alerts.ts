@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import * as data from '../../../../shared/data/component/ui-kits/alert/alert';
 
@@ -6,6 +6,7 @@ import * as data from '../../../../shared/data/component/ui-kits/alert/alert';
   selector: 'app-icons-text-alerts',
   imports: [],
   templateUrl: './icons-text-alerts.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./icons-text-alerts.scss'],
 })
 export class IconsTextAlerts {

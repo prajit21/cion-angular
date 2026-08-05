@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
 
@@ -8,6 +8,7 @@ import * as cryptoannotationchart from '../../../../shared/data/component/widget
   selector: 'app-crypto-annotations',
   imports: [NgApexchartsModule],
   templateUrl: './crypto-annotations.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./crypto-annotations.scss'],
 })
 export class CryptoAnnotations {

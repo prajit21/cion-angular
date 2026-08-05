@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { commongroupButton } from '../../../../shared/data/component/buttons/button-group';
 
@@ -6,6 +6,7 @@ import { commongroupButton } from '../../../../shared/data/component/buttons/but
   selector: 'app-large-button-group',
   imports: [],
   templateUrl: './large-button-group.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./large-button-group.scss'],
 })
 export class LargeButtonGroup {

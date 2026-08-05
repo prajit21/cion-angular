@@ -1,10 +1,11 @@
 import { NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-alerts-table',
   imports: [NgClass],
   templateUrl: './alerts-table.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./alerts-table.scss'],
 })
 export class AlertsTable {

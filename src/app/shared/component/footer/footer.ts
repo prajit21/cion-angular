@@ -1,11 +1,11 @@
-
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { NavservicesService } from '../../services/nav/navservices.service';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./footer.scss'],
 })
 export class Footer {

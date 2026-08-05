@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { FullscreenBelow } from './fullscreen-below/fullscreen-below';
 import { FullscreenBelowLg } from './fullscreen-below-lg/fullscreen-below-lg';
@@ -18,6 +18,7 @@ import { FullscreenBelowXxl } from './fullscreen-below-xxl/fullscreen-below-xxl'
     FullscreenBelowXxl,
   ],
   templateUrl: './fullscreen-modal.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./fullscreen-modal.scss'],
 })
 export class FullscreenModal {}

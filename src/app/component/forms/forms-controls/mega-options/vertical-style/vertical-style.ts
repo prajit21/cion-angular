@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { VerticalStylel } from '../../../../../shared/data/component/forms/form-controls/mega-options';
 
@@ -6,6 +6,7 @@ import { VerticalStylel } from '../../../../../shared/data/component/forms/form-
   selector: 'app-vertical-style',
   imports: [],
   templateUrl: './vertical-style.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./vertical-style.scss'],
 })
 export class VerticalStyle {

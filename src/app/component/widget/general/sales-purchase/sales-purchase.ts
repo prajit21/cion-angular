@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { commonData } from '../../../../shared/data/component/widget/general/general';
 
@@ -6,6 +6,7 @@ import { commonData } from '../../../../shared/data/component/widget/general/gen
   selector: 'app-sales-purchase',
   imports: [],
   templateUrl: './sales-purchase.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./sales-purchase.scss'],
 })
 export class SalesPurchase {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
@@ -76,6 +76,7 @@ const states: State[] = [
   selector: 'app-prevent-manual-entry',
   imports: [NgbTypeaheadModule, FormsModule],
   templateUrl: './prevent-manual-entry.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./prevent-manual-entry.scss'],
 })
 export class PreventManualEntry {

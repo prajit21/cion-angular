@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { switchSizeing } from '../../../../../shared/data/component/forms/forms-widgets/switch';
 
@@ -6,6 +6,7 @@ import { switchSizeing } from '../../../../../shared/data/component/forms/forms-
   selector: 'app-switch-sizing',
   imports: [],
   templateUrl: './switch-sizing.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./switch-sizing.scss'],
 })
 export class SwitchSizing {

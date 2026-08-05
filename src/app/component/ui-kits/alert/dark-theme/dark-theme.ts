@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { darkThemAlert } from '../../../../shared/data/component/ui-kits/alert/alert';
 
@@ -6,6 +6,7 @@ import { darkThemAlert } from '../../../../shared/data/component/ui-kits/alert/a
   selector: 'app-dark-theme',
   imports: [],
   templateUrl: './dark-theme.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./dark-theme.scss'],
 })
 export class DarkTheme {

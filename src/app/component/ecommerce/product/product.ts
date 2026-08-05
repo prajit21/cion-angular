@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { Filter } from './filter/filter';
 import { ProductBox } from './product-box/product-box';
@@ -9,6 +9,7 @@ import { ProductBoxFilterService } from '../../../shared/services/ecommerce/prod
   selector: 'app-product',
   imports: [Feathericon, Filter, ProductBox],
   templateUrl: './product.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./product.scss'],
 })
 export class Product {

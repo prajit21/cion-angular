@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { newProduct } from '../../../../shared/data/component/deshboard/shopping-place';
 
@@ -6,6 +6,7 @@ import { newProduct } from '../../../../shared/data/component/deshboard/shopping
   selector: 'app-new-product',
   imports: [],
   templateUrl: './new-product.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./new-product.scss'],
 })
 export class NewProduct {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
 
@@ -8,6 +8,7 @@ import * as Progresschart from '../../../../shared/data/component/widget/chart/w
   selector: 'app-order-status',
   imports: [NgApexchartsModule],
   templateUrl: './order-status.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./order-status.scss'],
 })
 export class OrderStatus {

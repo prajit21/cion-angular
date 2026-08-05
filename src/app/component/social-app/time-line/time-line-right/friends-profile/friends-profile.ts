@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -8,6 +8,7 @@ import * as data from '../../../../../shared/data/component/social-media/social-
   selector: 'app-friends-profile',
   imports: [NgbAccordionModule],
   templateUrl: './friends-profile.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./friends-profile.scss'],
 })
 export class FriendsProfile {

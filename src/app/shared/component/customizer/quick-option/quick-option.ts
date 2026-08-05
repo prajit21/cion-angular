@@ -1,5 +1,4 @@
-
-import { Component, HostListener, inject } from '@angular/core';
+import { Component, HostListener, inject, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { LayoutService } from '../../../services/layout/layout.service';
@@ -8,6 +7,7 @@ import { LayoutService } from '../../../services/layout/layout.service';
   selector: 'app-quick-option',
   imports: [FormsModule],
   templateUrl: './quick-option.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./quick-option.scss'],
 })
 export class QuickOption {

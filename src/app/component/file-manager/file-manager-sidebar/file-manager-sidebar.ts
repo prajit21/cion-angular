@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { Feathericon } from '../../../shared/component/feathericon/feathericon';
 
@@ -6,6 +6,7 @@ import { Feathericon } from '../../../shared/component/feathericon/feathericon';
   selector: 'app-file-manager-sidebar',
   imports: [Feathericon],
   templateUrl: './file-manager-sidebar.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./file-manager-sidebar.scss'],
 })
 export class FileManagerSidebar {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { ChartWidget } from './chart-widget/chart-widget';
 import { CryptoAnnotations } from './crypto-annotations/crypto-annotations';
@@ -32,6 +32,7 @@ import { UserChart } from './user-chart/user-chart';
     UserChart,
   ],
   templateUrl: './chart.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./chart.scss'],
 })
 export class Chart {}

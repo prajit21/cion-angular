@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { UploadFile } from './upload-file/upload-file';
 
@@ -6,6 +6,7 @@ import { UploadFile } from './upload-file/upload-file';
   selector: 'app-create-new',
   imports: [UploadFile],
   templateUrl: './create-new.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./create-new.scss'],
 })
 export class CreateNew {}

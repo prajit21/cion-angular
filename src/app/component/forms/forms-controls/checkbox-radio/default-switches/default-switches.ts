@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { defaultswitch } from '../../../../../shared/data/component/forms/form-controls/checkbox-radio';
 
@@ -6,6 +6,7 @@ import { defaultswitch } from '../../../../../shared/data/component/forms/form-c
   selector: 'app-default-switches',
   imports: [],
   templateUrl: './default-switches.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./default-switches.scss'],
 })
 export class DefaultSwitches {

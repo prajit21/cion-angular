@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -9,6 +9,7 @@ import { simpleAccordion } from '../../../../shared/data/component/ui-kits/accor
   selector: 'app-simple-accordion',
   imports: [Feathericon, NgbAccordionModule],
   templateUrl: './simple-accordion.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./simple-accordion.scss'],
 })
 export class SimpleAccordion {

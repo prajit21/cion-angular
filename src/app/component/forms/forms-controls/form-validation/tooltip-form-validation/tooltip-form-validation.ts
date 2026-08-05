@@ -1,9 +1,9 @@
-
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-tooltip-form-validation',
   templateUrl: './tooltip-form-validation.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./tooltip-form-validation.scss'],
 })
 export class TooltipFormValidation {

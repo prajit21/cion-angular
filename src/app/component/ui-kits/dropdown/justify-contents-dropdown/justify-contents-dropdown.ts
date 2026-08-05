@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -8,6 +8,7 @@ import { JustifyContents } from '../../../../shared/data/component/ui-kits/dropd
   selector: 'app-justify-contents-dropdown',
   imports: [NgbDropdownModule],
   templateUrl: './justify-contents-dropdown.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./justify-contents-dropdown.scss'],
 })
 export class JustifyContentsDropdown {

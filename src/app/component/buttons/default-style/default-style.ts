@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -8,6 +8,7 @@ import { DefaultButtons, styleButton } from '../../../shared/data/component/butt
   selector: 'app-default-style',
   imports: [NgbTooltipModule],
   templateUrl: './default-style.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./default-style.scss'],
 })
 export class DefaultStyle {

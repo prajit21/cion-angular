@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { recentOrder } from '../../../../shared/data/component/deshboard/shopping-place';
 
@@ -6,6 +6,7 @@ import { recentOrder } from '../../../../shared/data/component/deshboard/shoppin
   selector: 'app-recent-orders',
   imports: [],
   templateUrl: './recent-orders.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./recent-orders.scss'],
 })
 export class RecentOrders {

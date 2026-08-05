@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbAccordionConfig, NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -9,6 +9,7 @@ import { questionData } from '../../../shared/data/component/faq/faq';
   selector: 'app-questions-faq',
   imports: [NgbAccordionModule, Feathericon],
   templateUrl: './questions-faq.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./questions-faq.scss'],
 })
 export class QuestionsFaq {

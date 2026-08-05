@@ -1,5 +1,4 @@
-
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { Editor, NgxEditorModule } from 'ngx-editor';
@@ -8,6 +7,7 @@ import { Editor, NgxEditorModule } from 'ngx-editor';
   selector: 'app-new-mail',
   imports: [NgxEditorModule, FormsModule],
   templateUrl: './new-mail.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./new-mail.scss'],
 })
 export class NewMail {

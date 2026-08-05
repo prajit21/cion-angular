@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
 
@@ -9,6 +9,7 @@ import * as salesChart from '../../../../shared/data/component/deshboard/crm-das
   selector: 'app-sales-analyics',
   imports: [NgApexchartsModule, CommonAnalyics],
   templateUrl: './sales-analyics.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./sales-analyics.scss'],
 })
 export class SalesAnalyics {

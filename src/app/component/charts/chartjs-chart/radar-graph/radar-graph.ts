@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { RadarController, RadialLinearScale } from 'chart.js';
 import { BaseChartDirective, provideCharts } from 'ng2-charts';
@@ -10,6 +10,7 @@ import * as chartData from '../../../../shared/data/component/charts/chartjs';
   imports: [BaseChartDirective],
   providers: [provideCharts({ registerables: [RadarController, RadialLinearScale] })],
   templateUrl: './radar-graph.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./radar-graph.scss'],
 })
 export class RadarGraph {

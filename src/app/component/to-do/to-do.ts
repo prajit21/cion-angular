@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { ToDoFilter } from './to-do-filter/to-do-filter';
@@ -24,6 +24,7 @@ const Months = [
   selector: 'app-to-do',
   imports: [ToDoFilter, FormsModule, NgClass],
   templateUrl: './to-do.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./to-do.scss'],
 })
 export class ToDo {

@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { TranslateService } from '@ngx-translate/core';
 
@@ -16,6 +16,7 @@ interface selectedLanguage {
   imports: [],
   providers: [TranslateService],
   templateUrl: './language.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./language.scss'],
 })
 export class Language {

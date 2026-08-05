@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { AllNotification } from './all-notification/all-notification';
 import { BalanceOverview } from './balance-overview/balance-overview';
@@ -11,6 +11,7 @@ import { UpdateCard } from './update-card/update-card';
   selector: 'app-crm-dashboard',
   imports: [UpdateCard, TopCustomer, AllNotification, BalanceOverview, SalesAnalyics, DealOpen],
   templateUrl: './crm-dashboard.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./crm-dashboard.scss'],
 })
 export class CrmDashboard {}

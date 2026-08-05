@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -9,6 +9,7 @@ import { menuChat } from '../../../../shared/data/component/chat/chat';
   selector: 'app-chat-tab',
   imports: [NgbNavModule, ProfileTab],
   templateUrl: './chat-tab.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./chat-tab.scss'],
 })
 export class ChatTab {

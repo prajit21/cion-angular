@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { ActiveLists } from './active-lists/active-lists';
 import { ContextualClasses } from './contextual-classes/contextual-classes';
@@ -32,6 +32,7 @@ import { ScrollableLists } from './scrollable-lists/scrollable-lists';
     ScrollableLists,
   ],
   templateUrl: './lists.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./lists.scss'],
 })
 export class Lists {}

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { CommonOutline } from '../../../../shared/data/component/buttons/button-group';
 
@@ -6,6 +6,7 @@ import { CommonOutline } from '../../../../shared/data/component/buttons/button-
   selector: 'app-outline-button-group',
   imports: [],
   templateUrl: './outline-button-group.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./outline-button-group.scss'],
 })
 export class OutlineButtonGroup {

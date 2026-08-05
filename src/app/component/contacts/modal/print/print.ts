@@ -1,4 +1,4 @@
-import { Component, inject, TemplateRef, viewChild } from '@angular/core';
+import { Component, inject, TemplateRef, viewChild, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbActiveModal, NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
@@ -9,6 +9,7 @@ import * as data from '../../../../shared/data/component/contacts/all-contact';
   imports: [],
   providers: [NgbActiveModal],
   templateUrl: './print.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./print.scss'],
 })
 export class Print {

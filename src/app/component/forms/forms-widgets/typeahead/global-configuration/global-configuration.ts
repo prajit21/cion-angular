@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { NgbTypeaheadConfig, NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
@@ -71,6 +71,7 @@ const states = [
   selector: 'app-global-configuration',
   imports: [NgbTypeaheadModule, FormsModule],
   templateUrl: './global-configuration.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./global-configuration.scss'],
 })
 export class GlobalConfiguration {

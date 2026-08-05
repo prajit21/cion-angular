@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -6,6 +6,7 @@ import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-vertical-tabs',
   imports: [NgbNavModule],
   templateUrl: './vertical-tabs.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./vertical-tabs.scss'],
 })
 export class VerticalTabs {

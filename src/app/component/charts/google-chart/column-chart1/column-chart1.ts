@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 
@@ -8,6 +8,7 @@ import * as chartData from '../../../../shared/data/component/charts/google-char
   selector: 'app-column-chart1',
   imports: [Ng2GoogleChartsModule],
   templateUrl: './column-chart1.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./column-chart1.scss'],
 })
 export class ColumnChart1 {

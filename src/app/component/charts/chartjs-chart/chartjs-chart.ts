@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { BarsChart } from './bars-chart/bars-chart';
 import { DoughnutChart } from './doughnut-chart/doughnut-chart';
@@ -11,6 +11,7 @@ import { RadarGraph } from './radar-graph/radar-graph';
   selector: 'app-chartjs-chart',
   imports: [BarsChart, LineGraph, RadarGraph, LinesChart, DoughnutChart, PolarChart],
   templateUrl: './chartjs-chart.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./chartjs-chart.scss'],
 })
 export class ChartjsChart {}

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { UserProfile1 } from './user-profile1/user-profile1';
 import { UserProfile2 } from './user-profile2/user-profile2';
@@ -10,6 +10,7 @@ import { UserProfile5 } from './user-profile5/user-profile5';
   selector: 'app-user-profile',
   imports: [UserProfile1, UserProfile2, UserProfile3, UserProfile4, UserProfile5],
   templateUrl: './user-profile.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./user-profile.scss'],
 })
 export class UserProfile {}

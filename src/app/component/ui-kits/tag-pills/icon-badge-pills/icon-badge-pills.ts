@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import {
   iconbadge,
@@ -10,6 +10,7 @@ import { CommonBadgesPills } from '../common-badges-pills/common-badges-pills';
   selector: 'app-icon-badge-pills',
   imports: [CommonBadgesPills],
   templateUrl: './icon-badge-pills.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./icon-badge-pills.scss'],
 })
 export class IconBadgePills {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import {
   UnorderList,
@@ -9,6 +9,7 @@ import {
   selector: 'app-listing-typography',
   imports: [],
   templateUrl: './listing-typography.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./listing-typography.scss'],
 })
 export class ListingTypography {

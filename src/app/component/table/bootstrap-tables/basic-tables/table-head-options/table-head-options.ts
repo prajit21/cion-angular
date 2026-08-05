@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { tablehead } from '../../../../../shared/data/component/table/bootstrap-table/basic-tables';
 
@@ -6,6 +6,7 @@ import { tablehead } from '../../../../../shared/data/component/table/bootstrap-
   selector: 'app-table-head-options',
   imports: [],
   templateUrl: './table-head-options.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./table-head-options.scss'],
 })
 export class TableHeadOptions {

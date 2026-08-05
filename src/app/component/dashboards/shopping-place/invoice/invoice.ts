@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { invoiceData } from '../../../../shared/data/component/deshboard/shopping-place';
 
@@ -6,6 +6,7 @@ import { invoiceData } from '../../../../shared/data/component/deshboard/shoppin
   selector: 'app-invoice',
   imports: [],
   templateUrl: './invoice.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./invoice.scss'],
 })
 export class Invoice {

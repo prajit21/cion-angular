@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { caption } from '../../../../../shared/data/component/table/bootstrap-table/basic-tables';
 
@@ -6,6 +6,7 @@ import { caption } from '../../../../../shared/data/component/table/bootstrap-ta
   selector: 'app-caption',
   imports: [],
   templateUrl: './caption.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./caption.scss'],
 })
 export class Caption {

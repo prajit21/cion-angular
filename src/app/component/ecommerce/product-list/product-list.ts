@@ -1,5 +1,5 @@
 import { DecimalPipe, AsyncPipe } from '@angular/common';
-import { Component, inject, viewChildren } from '@angular/core';
+import { Component, inject, viewChildren, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
@@ -16,6 +16,7 @@ import { ProductListService } from '../../../shared/services/ecommerce/product-l
   imports: [FormsModule, RouterModule, ProductListDirective, NgbPaginationModule, AsyncPipe],
   providers: [ProductListService, DecimalPipe],
   templateUrl: './product-list.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./product-list.scss'],
 })
 export class ProductList {

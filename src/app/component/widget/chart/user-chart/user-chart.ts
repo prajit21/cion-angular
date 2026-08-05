@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
 
@@ -8,6 +8,7 @@ import * as userschart from '../../../../shared/data/component/widget/chart/widg
   selector: 'app-user-chart',
   imports: [NgApexchartsModule],
   templateUrl: './user-chart.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./user-chart.scss'],
 })
 export class UserChart {

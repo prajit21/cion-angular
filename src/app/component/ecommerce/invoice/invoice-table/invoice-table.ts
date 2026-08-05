@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { invoice } from '../../../../shared/data/component/e-commerce/invoice';
 
@@ -6,6 +6,7 @@ import { invoice } from '../../../../shared/data/component/e-commerce/invoice';
   selector: 'app-invoice-table',
   imports: [],
   templateUrl: './invoice-table.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./invoice-table.scss'],
 })
 export class InvoiceTable {

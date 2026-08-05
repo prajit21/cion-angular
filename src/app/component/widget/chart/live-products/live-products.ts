@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
 
@@ -8,6 +8,7 @@ import * as Liveproductchart from '../../../../shared/data/component/widget/char
   selector: 'app-live-products',
   imports: [NgApexchartsModule],
   templateUrl: './live-products.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./live-products.scss'],
 })
 export class LiveProducts {

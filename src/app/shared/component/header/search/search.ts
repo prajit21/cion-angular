@@ -1,5 +1,5 @@
 import { SlicePipe } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
@@ -11,6 +11,7 @@ import { SvgIcon } from '../../svg-icon/svg-icon';
   selector: 'app-search',
   imports: [RouterModule, SvgIcon, FormsModule, ClickOutsideDirective, SlicePipe],
   templateUrl: './search.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./search.scss'],
 })
 export class Search {

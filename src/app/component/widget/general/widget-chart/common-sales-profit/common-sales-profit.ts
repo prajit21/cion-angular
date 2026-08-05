@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
 
@@ -9,6 +9,7 @@ import { RadialChartOptions } from '../../../../../shared/interface/widgets/char
   selector: 'app-common-sales-profit',
   imports: [NgApexchartsModule, Feathericon],
   templateUrl: './common-sales-profit.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./common-sales-profit.scss'],
 })
 export class CommonSalesProfit {

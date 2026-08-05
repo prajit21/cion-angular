@@ -1,9 +1,9 @@
-
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-validation-form',
   templateUrl: './validation-form.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./validation-form.scss'],
 })
 export class ValidationForm {

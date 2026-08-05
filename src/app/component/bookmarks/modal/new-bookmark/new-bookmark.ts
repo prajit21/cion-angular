@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -6,6 +6,7 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-new-bookmark',
   imports: [],
   templateUrl: './new-bookmark.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./new-bookmark.scss'],
 })
 export class NewBookmark {

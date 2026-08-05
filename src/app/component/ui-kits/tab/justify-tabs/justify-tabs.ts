@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -12,6 +12,7 @@ import {
   selector: 'app-justify-tabs',
   imports: [NgbNavModule],
   templateUrl: './justify-tabs.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./justify-tabs.scss'],
 })
 export class JustifyTabs {

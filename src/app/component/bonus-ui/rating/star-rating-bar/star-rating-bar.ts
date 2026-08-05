@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { BarRatingModule } from 'ngx-bar-rating';
 
@@ -6,6 +6,7 @@ import { BarRatingModule } from 'ngx-bar-rating';
   selector: 'app-star-rating-bar',
   imports: [BarRatingModule],
   templateUrl: './star-rating-bar.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./star-rating-bar.scss'],
 })
 export class StarRatingBar {

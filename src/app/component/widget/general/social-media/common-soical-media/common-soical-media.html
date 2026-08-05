@@ -2,7 +2,12 @@
   <div class="card-body">
     <div class="d-flex align-items-center justify-content-between">
       <div class="d-flex align-items-center gap-2">
-        <div class="social-icons"><img [src]="data()?.image" [alt]="data()?.name + ' icon'" /></div>
+        <div class="social-icons">
+          <img
+            [src]="$safeNavigationMigration(data()?.image)"
+            [alt]="$safeNavigationMigration(data()?.name) + ' icon'"
+          />
+        </div>
         <span>{{data()?.name}}</span>
       </div>
       <span class="font-success f-14 d-xxl-block d-xl-none">+{{data()?.pr}}%</span>

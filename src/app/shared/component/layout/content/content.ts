@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component, HostListener, inject } from '@angular/core';
+import { Component, HostListener, inject, ChangeDetectionStrategy } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 
 import * as feather from 'feather-icons';
@@ -17,6 +17,7 @@ import { Sidebar } from '../../sidebar/sidebar';
   selector: 'app-content',
   imports: [Header, Breadcrumb, Footer, Customizer, RouterModule, Sidebar, NgClass],
   templateUrl: './content.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./content.scss'],
 })
 export class Content {

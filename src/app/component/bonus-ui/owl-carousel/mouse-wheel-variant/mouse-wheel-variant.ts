@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
@@ -11,6 +11,7 @@ import {
   selector: 'app-mouse-wheel-variant',
   imports: [CarouselModule],
   templateUrl: './mouse-wheel-variant.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./mouse-wheel-variant.scss'],
 })
 export class MouseWheelVariant {

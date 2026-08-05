@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgxSliderModule, Options } from '@angular-slider/ngx-slider';
 
@@ -6,6 +6,7 @@ import { NgxSliderModule, Options } from '@angular-slider/ngx-slider';
   selector: 'app-prettify-numbers',
   imports: [NgxSliderModule],
   templateUrl: './prettify-numbers.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./prettify-numbers.scss'],
 })
 export class PrettifyNumbers {

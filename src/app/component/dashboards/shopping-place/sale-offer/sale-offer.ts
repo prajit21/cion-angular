@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { saleProductoffer } from '../../../../shared/data/component/deshboard/shopping-place';
 
@@ -6,6 +6,7 @@ import { saleProductoffer } from '../../../../shared/data/component/deshboard/sh
   selector: 'app-sale-offer',
   imports: [],
   templateUrl: './sale-offer.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./sale-offer.scss'],
 })
 export class SaleOffer {

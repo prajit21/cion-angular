@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { blackqutoesData } from '../../../../shared/data/component/ui-kits/typogaraphy/typogaraphy';
 
@@ -6,6 +6,7 @@ import { blackqutoesData } from '../../../../shared/data/component/ui-kits/typog
   selector: 'app-blockquotes',
   imports: [],
   templateUrl: './blockquotes.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./blockquotes.scss'],
 })
 export class Blockquotes {

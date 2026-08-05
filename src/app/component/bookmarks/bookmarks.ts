@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { SideMenu } from './side-menu/side-menu';
 
@@ -6,6 +6,7 @@ import { SideMenu } from './side-menu/side-menu';
   selector: 'app-bookmarks',
   imports: [SideMenu],
   templateUrl: './bookmarks.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./bookmarks.scss'],
 })
 export class Bookmarks {}

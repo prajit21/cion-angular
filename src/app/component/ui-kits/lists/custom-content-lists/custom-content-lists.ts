@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { CustomContentList } from '../../../../shared/data/component/ui-kits/lists/lists';
 
@@ -6,6 +6,7 @@ import { CustomContentList } from '../../../../shared/data/component/ui-kits/lis
   selector: 'app-custom-content-lists',
   imports: [],
   templateUrl: './custom-content-lists.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./custom-content-lists.scss'],
 })
 export class CustomContentLists {

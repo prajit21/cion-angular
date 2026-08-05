@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -6,6 +6,7 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-dark-dropdown',
   imports: [NgbDropdownModule],
   templateUrl: './dark-dropdown.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./dark-dropdown.scss'],
 })
 export class DarkDropdown {}

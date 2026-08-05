@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { commonAnalyics } from '../../../../../shared/data/component/deshboard/crm-dashboard';
 
@@ -6,6 +6,7 @@ import { commonAnalyics } from '../../../../../shared/data/component/deshboard/c
   selector: 'app-common-analyics',
   imports: [],
   templateUrl: './common-analyics.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./common-analyics.scss'],
 })
 export class CommonAnalyics {

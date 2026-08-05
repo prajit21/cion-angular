@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { activeLists } from '../../../../shared/data/component/ui-kits/lists/lists';
 
@@ -6,6 +6,7 @@ import { activeLists } from '../../../../shared/data/component/ui-kits/lists/lis
   selector: 'app-active-lists',
   imports: [],
   templateUrl: './active-lists.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./active-lists.scss'],
 })
 export class ActiveLists {

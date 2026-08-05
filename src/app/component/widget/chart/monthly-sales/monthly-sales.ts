@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
 
@@ -8,6 +8,7 @@ import * as monthlysaleschart from '../../../../shared/data/component/widget/cha
   selector: 'app-monthly-sales',
   imports: [NgApexchartsModule],
   templateUrl: './monthly-sales.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./monthly-sales.scss'],
 })
 export class MonthlySales {

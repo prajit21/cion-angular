@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { Feathericon } from '../../../../shared/component/feathericon/feathericon';
 import * as data from '../../../../shared/data/component/ui-kits/alert/alert';
@@ -7,6 +7,7 @@ import * as data from '../../../../shared/data/component/ui-kits/alert/alert';
   selector: 'app-outline-alerts',
   imports: [Feathericon],
   templateUrl: './outline-alerts.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./outline-alerts.scss'],
 })
 export class OutlineAlerts {

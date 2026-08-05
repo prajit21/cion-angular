@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { NgSelectModule } from '@ng-select/ng-select';
@@ -7,6 +7,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
   selector: 'app-defaultselect2',
   imports: [NgSelectModule, FormsModule],
   templateUrl: './defaultselect2.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./defaultselect2.scss'],
 })
 export class Defaultselect2 {

@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
 import * as Data from '../../../shared/data/component/search-result/search-result';
@@ -7,6 +7,7 @@ import * as Data from '../../../shared/data/component/search-result/search-resul
   selector: 'app-videos',
   imports: [],
   templateUrl: './videos.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./videos.scss'],
 })
 export class Videos {

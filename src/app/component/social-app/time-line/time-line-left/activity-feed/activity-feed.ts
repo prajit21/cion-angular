@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -8,6 +8,7 @@ import * as data from '../../../../../shared/data/component/social-media/social-
   selector: 'app-activity-feed',
   imports: [NgbAccordionModule],
   templateUrl: './activity-feed.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./activity-feed.scss'],
 })
 export class ActivityFeed {

@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbRatingConfig, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -9,6 +9,7 @@ import { CancelledOrder, Order } from '../../../../shared/data/component/e-comme
   selector: 'app-cancelled-orders',
   imports: [Feathericon, NgbRatingModule],
   templateUrl: './cancelled-orders.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./cancelled-orders.scss'],
 })
 export class CancelledOrders {

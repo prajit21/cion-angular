@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap';
@@ -71,6 +71,7 @@ const states = [
   selector: 'app-formatted-results',
   imports: [NgbTypeaheadModule, FormsModule],
   templateUrl: './formatted-results.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./formatted-results.scss'],
 })
 export class FormattedResults {

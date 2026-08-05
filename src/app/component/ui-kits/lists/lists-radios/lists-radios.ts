@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { Listradios } from '../../../../shared/data/component/ui-kits/lists/lists';
 
@@ -6,6 +6,7 @@ import { Listradios } from '../../../../shared/data/component/ui-kits/lists/list
   selector: 'app-lists-radios',
   imports: [],
   templateUrl: './lists-radios.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./lists-radios.scss'],
 })
 export class ListsRadios {

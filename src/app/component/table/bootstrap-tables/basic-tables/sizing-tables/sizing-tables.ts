@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { sizingTable } from '../../../../../shared/data/component/table/bootstrap-table/basic-tables';
 
@@ -6,6 +6,7 @@ import { sizingTable } from '../../../../../shared/data/component/table/bootstra
   selector: 'app-sizing-tables',
   imports: [],
   templateUrl: './sizing-tables.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./sizing-tables.scss'],
 })
 export class SizingTables {

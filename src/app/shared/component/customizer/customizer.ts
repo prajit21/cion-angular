@@ -1,5 +1,11 @@
 import { NgClass } from '@angular/common';
-import { Component, HostListener, inject, TemplateRef } from '@angular/core';
+import {
+  Component,
+  HostListener,
+  inject,
+  TemplateRef,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -11,6 +17,7 @@ import { LayoutService } from '../../services/layout/layout.service';
   selector: 'app-customizer',
   imports: [ColorPicker, QuickOption, NgClass],
   templateUrl: './customizer.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./customizer.scss'],
 })
 export class Customizer {
@@ -31,7 +38,6 @@ export class Customizer {
       this.screenwidth = window.innerWidth;
     }
   }
-
 
   Customizer(val: string) {
     this.layoutService.customizer = val;

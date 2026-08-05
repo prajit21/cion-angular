@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
 
@@ -8,6 +8,7 @@ import * as chartData from '../../../../shared/data/component/charts/charts';
   selector: 'app-column-chart',
   imports: [NgApexchartsModule],
   templateUrl: './column-chart.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./column-chart.scss'],
 })
 export class ColumnChart {

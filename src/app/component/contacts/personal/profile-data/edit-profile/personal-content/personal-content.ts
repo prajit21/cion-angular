@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
 
 import * as data from '../../../../../../shared/data/component/contacts/all-contact';
 
@@ -6,6 +6,7 @@ import * as data from '../../../../../../shared/data/component/contacts/all-cont
   selector: 'app-personal-content',
   imports: [],
   templateUrl: './personal-content.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./personal-content.scss'],
 })
 export class PersonalContent {

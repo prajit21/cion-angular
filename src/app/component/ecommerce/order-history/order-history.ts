@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { CancelledOrders } from './cancelled-orders/cancelled-orders';
 import { DatatableOrderHistory } from './datatable-order-history/datatable-order-history';
@@ -9,6 +9,7 @@ import { ShippedOrders } from './shipped-orders/shipped-orders';
   selector: 'app-order-history',
   imports: [NewOrders, ShippedOrders, CancelledOrders, DatatableOrderHistory],
   templateUrl: './order-history.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./order-history.scss'],
 })
 export class OrderHistory {}

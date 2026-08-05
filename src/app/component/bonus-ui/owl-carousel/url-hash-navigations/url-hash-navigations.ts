@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
@@ -11,6 +11,7 @@ import {
   selector: 'app-url-hash-navigations',
   imports: [CarouselModule],
   templateUrl: './url-hash-navigations.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./url-hash-navigations.scss'],
 })
 export class UrlHashNavigations {

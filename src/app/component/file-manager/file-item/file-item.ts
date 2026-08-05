@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { Feathericon } from '../../../shared/component/feathericon/feathericon';
 import * as fileData from '../../../shared/data/component/file-manager/file-manager';
@@ -7,6 +7,7 @@ import * as fileData from '../../../shared/data/component/file-manager/file-mana
   selector: 'app-file-item',
   imports: [Feathericon],
   templateUrl: './file-item.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./file-item.scss'],
 })
 export class FileItem {

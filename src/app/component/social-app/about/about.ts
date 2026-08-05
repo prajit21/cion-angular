@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { AboutCenter } from './about-center/about-center';
 import { TimeLineLeft } from '../time-line/time-line-left/time-line-left';
@@ -8,6 +8,7 @@ import { TimeLineRight } from '../time-line/time-line-right/time-line-right';
   selector: 'app-about',
   imports: [AboutCenter, TimeLineLeft, TimeLineRight],
   templateUrl: './about.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./about.scss'],
 })
 export class About {}

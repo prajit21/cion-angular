@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
 
@@ -8,6 +8,7 @@ import * as orderchart from '../../../../shared/data/component/widget/chart/widg
   selector: 'app-order-status-chart',
   imports: [NgApexchartsModule],
   templateUrl: './order-status-chart.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./order-status-chart.scss'],
 })
 export class OrderStatusChart {

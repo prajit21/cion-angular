@@ -1,5 +1,4 @@
-
-import { Component, inject, TemplateRef } from '@angular/core';
+import { Component, inject, TemplateRef, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -9,6 +8,7 @@ import { Feathericon } from '../../../../../shared/component/feathericon/feather
   selector: 'app-simple-modal',
   imports: [Feathericon],
   templateUrl: './simple-modal.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./simple-modal.scss'],
 })
 export class SimpleModal {

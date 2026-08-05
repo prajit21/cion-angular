@@ -1,5 +1,5 @@
 import { DecimalPipe, AsyncPipe, NgClass } from '@angular/common';
-import { Component, inject, viewChildren } from '@angular/core';
+import { Component, inject, viewChildren, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
@@ -14,9 +14,17 @@ import { SupportTicketService } from '../../../shared/services/support-ticket/su
 
 @Component({
   selector: 'app-support-ticket-data-table',
-  imports: [NgbdSortableHeader2Directive, FormsModule, NgbPaginationModule, AsyncPipe, DecimalPipe, NgClass],
+  imports: [
+    NgbdSortableHeader2Directive,
+    FormsModule,
+    NgbPaginationModule,
+    AsyncPipe,
+    DecimalPipe,
+    NgClass,
+  ],
   providers: [DecimalPipe, SupportTicketService],
   templateUrl: './support-ticket-data-table.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./support-ticket-data-table.scss'],
 })
 export class SupportTicketDataTable {

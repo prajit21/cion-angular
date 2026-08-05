@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { TopSellingProduct } from './top-selling-product/top-selling-product';
 
@@ -6,6 +6,7 @@ import { TopSellingProduct } from './top-selling-product/top-selling-product';
   selector: 'app-top-seller',
   imports: [TopSellingProduct],
   templateUrl: './top-seller.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./top-seller.scss'],
 })
 export class TopSeller {}

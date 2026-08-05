@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { PolarAreaController } from 'chart.js';
 import { BaseChartDirective, provideCharts } from 'ng2-charts';
@@ -10,6 +10,7 @@ import * as chartData from '../../../../shared/data/component/charts/chartjs';
   imports: [BaseChartDirective],
   providers: [provideCharts({ registerables: [PolarAreaController] })],
   templateUrl: './polar-chart.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./polar-chart.scss'],
 })
 export class PolarChart {

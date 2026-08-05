@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { FeaturedTutorials } from './featured-tutorials/featured-tutorials';
 import { LatestArticlesVideos } from './latest-articles-videos/latest-articles-videos';
@@ -25,6 +25,7 @@ import {
     LatestArticlesVideos,
   ],
   templateUrl: './faq.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./faq.scss'],
 })
 export class Faq {

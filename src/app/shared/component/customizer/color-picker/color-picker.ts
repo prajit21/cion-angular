@@ -1,5 +1,4 @@
-
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { LayoutService } from '../../../services/layout/layout.service';
@@ -8,6 +7,7 @@ import { LayoutService } from '../../../services/layout/layout.service';
   selector: 'app-color-picker',
   imports: [FormsModule],
   templateUrl: './color-picker.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./color-picker.scss'],
 })
 export class ColorPicker {

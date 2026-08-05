@@ -1,5 +1,5 @@
 import { JsonPipe } from '@angular/common';
-import { Component, inject, TemplateRef, viewChild } from '@angular/core';
+import { Component, inject, TemplateRef, viewChild, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -43,6 +43,7 @@ const colors: Record<string, EventColor> = {
   selector: 'app-calender',
   imports: [FlatpickrModule, CalendarModule, FormsModule, JsonPipe],
   templateUrl: './calender.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./calender.scss'],
 })
 export class Calender {

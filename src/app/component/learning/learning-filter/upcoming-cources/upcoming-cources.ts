@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbCollapseModule, NgbRatingConfig, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -8,6 +8,7 @@ import { upcomingCourse } from '../../../../shared/data/component/learning/learn
   selector: 'app-upcoming-cources',
   imports: [NgbCollapseModule, NgbRatingModule],
   templateUrl: './upcoming-cources.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./upcoming-cources.scss'],
 })
 export class UpcomingCources {

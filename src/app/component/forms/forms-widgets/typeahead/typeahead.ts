@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { FormattedResults } from './formatted-results/formatted-results';
 import { GlobalConfiguration } from './global-configuration/global-configuration';
@@ -22,6 +22,7 @@ import { WikipediaSearch } from './wikipedia-search/wikipedia-search';
     GlobalConfiguration,
   ],
   templateUrl: './typeahead.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./typeahead.scss'],
 })
 export class Typeahead {}

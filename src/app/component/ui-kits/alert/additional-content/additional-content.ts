@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { AdditionalContents } from '../../../../shared/data/component/ui-kits/alert/alert';
 
@@ -6,6 +6,7 @@ import { AdditionalContents } from '../../../../shared/data/component/ui-kits/al
   selector: 'app-additional-content',
   imports: [],
   templateUrl: './additional-content.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./additional-content.scss'],
 })
 export class AdditionalContent {

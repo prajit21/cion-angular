@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { Alignments } from './alignments/alignments';
 import { BasicDropdown } from './basic-dropdown/basic-dropdown';
@@ -30,6 +30,7 @@ import { UniqueDropdown } from './unique-dropdown/unique-dropdown';
     DropdownSizing,
   ],
   templateUrl: './dropdown.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./dropdown.scss'],
 })
 export class Dropdown {}

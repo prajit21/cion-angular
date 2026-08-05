@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { VariationLeftRibbons } from './variation-left-ribbons/variation-left-ribbons';
 import { VariationRightRibbons } from './variation-right-ribbons/variation-right-ribbons';
@@ -7,6 +7,7 @@ import { VariationRightRibbons } from './variation-right-ribbons/variation-right
   selector: 'app-ribbons',
   imports: [VariationLeftRibbons, VariationRightRibbons],
   templateUrl: './ribbons.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./ribbons.scss'],
 })
 export class Ribbons {}

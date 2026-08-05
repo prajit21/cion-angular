@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { basicTimeline } from '../../../../shared/data/component/bonus-ui/timeline/timeline';
 
@@ -6,6 +6,7 @@ import { basicTimeline } from '../../../../shared/data/component/bonus-ui/timeli
   selector: 'app-basic-timeline',
   imports: [],
   templateUrl: './basic-timeline.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./basic-timeline.scss'],
 })
 export class BasicTimeline {

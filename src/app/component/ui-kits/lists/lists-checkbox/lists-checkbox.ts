@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { Listcheckbox } from '../../../..//shared/data/component/ui-kits/lists/lists';
 
@@ -6,6 +6,7 @@ import { Listcheckbox } from '../../../..//shared/data/component/ui-kits/lists/l
   selector: 'app-lists-checkbox',
   imports: [],
   templateUrl: './lists-checkbox.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./lists-checkbox.scss'],
 })
 export class ListsCheckbox {

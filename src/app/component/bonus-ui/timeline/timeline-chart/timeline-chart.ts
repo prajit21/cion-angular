@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 
@@ -10,6 +10,7 @@ import { Resolutions } from './resolutions/resolutions';
   selector: 'app-timeline-chart',
   imports: [AudioTesting, MeetUp, Resolutions, CarouselModule],
   templateUrl: './timeline-chart.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./timeline-chart.scss'],
 })
 export class TimelineChart {

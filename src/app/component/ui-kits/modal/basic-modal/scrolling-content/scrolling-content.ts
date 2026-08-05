@@ -1,5 +1,4 @@
-
-import { Component, inject, TemplateRef } from '@angular/core';
+import { Component, inject, TemplateRef, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -10,6 +9,7 @@ import { ModalData } from '../../../../../shared/data/component/ui-kits/modal/mo
   selector: 'app-scrolling-content',
   imports: [Feathericon],
   templateUrl: './scrolling-content.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./scrolling-content.scss'],
 })
 export class ScrollingContent {

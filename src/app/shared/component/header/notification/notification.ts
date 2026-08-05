@@ -1,11 +1,11 @@
-
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-notification',
   imports: [RouterModule],
   templateUrl: './notification.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./notification.scss'],
 })
 export class Notification {

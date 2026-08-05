@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-coming-with-bg-image',
   imports: [],
   templateUrl: './coming-with-bg-image.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./coming-with-bg-image.scss'],
 })
 export class ComingWithBgImage {

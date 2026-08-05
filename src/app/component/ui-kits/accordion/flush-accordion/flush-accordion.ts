@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -8,6 +8,7 @@ import { FlushAccordions } from '../../../../shared/data/component/ui-kits/accor
   selector: 'app-flush-accordion',
   imports: [NgbAccordionModule],
   templateUrl: './flush-accordion.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./flush-accordion.scss'],
 })
 export class FlushAccordion {

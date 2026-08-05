@@ -1,5 +1,4 @@
-
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { LeafletModule } from '@bluehalo/ngx-leaflet';
 import * as L from 'leaflet';
@@ -10,6 +9,7 @@ import { contriesdetils } from '../../../../shared/data/component/deshboard/shop
   selector: 'app-top-countries',
   imports: [LeafletModule],
   templateUrl: './top-countries.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./top-countries.scss'],
 })
 export class TopCountries {

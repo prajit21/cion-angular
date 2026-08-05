@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { ChatTab } from './chat-tab/chat-tab';
 import { Chats } from './chats/chats';
@@ -8,6 +8,7 @@ import { UserChat } from './user-chat/user-chat';
   selector: 'app-chat-app',
   imports: [UserChat, Chats, ChatTab],
   templateUrl: './chat-app.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./chat-app.scss'],
 })
 export class ChatApp {

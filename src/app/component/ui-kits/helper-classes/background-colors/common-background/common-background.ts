@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
 
 import { titleData } from '../../../../../shared/data/component/ui-kits/helper-classes/helper-classes';
 
@@ -6,6 +6,7 @@ import { titleData } from '../../../../../shared/data/component/ui-kits/helper-c
   selector: 'app-common-background',
   imports: [],
   templateUrl: './common-background.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./common-background.scss'],
 })
 export class CommonBackground {

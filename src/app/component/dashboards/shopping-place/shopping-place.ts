@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { ActivityTimeline } from './activity-timeline/activity-timeline';
 import { Earning } from './earning/earning';
@@ -30,6 +30,7 @@ import { Visitors } from './visitors/visitors';
     SaleProduct,
   ],
   templateUrl: './shopping-place.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./shopping-place.scss'],
 })
 export class ShoppingPlace {}

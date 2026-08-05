@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
 
@@ -8,6 +8,7 @@ import * as follwesgrowthchat from '../../../../../shared/data/component/widget/
   selector: 'app-follwers-growth',
   imports: [NgApexchartsModule],
   templateUrl: './follwers-growth.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./follwers-growth.scss'],
 })
 export class FollwersGrowth {

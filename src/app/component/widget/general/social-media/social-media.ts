@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { CommonSoicalMedia } from './common-soical-media/common-soical-media';
 import * as soicalchat from '../../../../shared/data/component/widget/general/general-chats';
@@ -7,6 +7,7 @@ import * as soicalchat from '../../../../shared/data/component/widget/general/ge
   selector: 'app-social-media',
   imports: [CommonSoicalMedia],
   templateUrl: './social-media.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./social-media.scss'],
 })
 export class SocialMedia {

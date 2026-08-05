@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { CommonBorder } from './common-border/common-border';
 import * as borderData from '../../../../shared/data/component/ui-kits/helper-classes/helper-classes';
@@ -7,6 +7,7 @@ import * as borderData from '../../../../shared/data/component/ui-kits/helper-cl
   selector: 'app-border-style',
   imports: [CommonBorder],
   templateUrl: './border-style.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./border-style.scss'],
 })
 export class BorderStyle {

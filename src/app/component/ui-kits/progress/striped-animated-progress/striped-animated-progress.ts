@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import {
   ProgressBarsAnimated,
@@ -10,6 +10,7 @@ import { CommonProgressbar } from '../common-progressbar/common-progressbar';
   selector: 'app-striped-animated-progress',
   imports: [CommonProgressbar],
   templateUrl: './striped-animated-progress.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./striped-animated-progress.scss'],
 })
 export class StripedAnimatedProgress {

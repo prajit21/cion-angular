@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { customHover } from '../../../../../shared/data/component/table/bootstrap-table/basic-tables';
 
@@ -6,6 +6,7 @@ import { customHover } from '../../../../../shared/data/component/table/bootstra
   selector: 'app-custom-table-color-stripped',
   imports: [],
   templateUrl: './custom-table-color-stripped.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./custom-table-color-stripped.scss'],
 })
 export class CustomTableColorStripped {

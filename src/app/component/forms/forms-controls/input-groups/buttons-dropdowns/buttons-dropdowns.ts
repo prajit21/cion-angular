@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-buttons-dropdowns',
   imports: [],
   templateUrl: './buttons-dropdowns.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./buttons-dropdowns.scss'],
 })
 export class ButtonsDropdowns {

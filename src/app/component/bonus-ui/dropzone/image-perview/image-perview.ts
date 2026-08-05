@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { DropzoneConfigInterface, DropzoneModule } from 'ngx-dropzone-wrapper';
 
@@ -6,6 +6,7 @@ import { DropzoneConfigInterface, DropzoneModule } from 'ngx-dropzone-wrapper';
   selector: 'app-image-perview',
   imports: [DropzoneModule],
   templateUrl: './image-perview.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./image-perview.scss'],
 })
 export class ImagePerview {

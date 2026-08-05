@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { BaseChartDirective } from 'ng2-charts';
 
@@ -8,6 +8,7 @@ import * as chartData from '../../../../shared/data/component/charts/chartjs';
   selector: 'app-line-graph',
   imports: [BaseChartDirective],
   templateUrl: './line-graph.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./line-graph.scss'],
 })
 export class LineGraph {

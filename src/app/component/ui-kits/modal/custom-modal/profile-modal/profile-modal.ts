@@ -1,4 +1,4 @@
-import { Component, inject, TemplateRef } from '@angular/core';
+import { Component, inject, TemplateRef, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -6,6 +6,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-profile-modal',
   imports: [],
   templateUrl: './profile-modal.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./profile-modal.scss'],
 })
 export class ProfileModal {

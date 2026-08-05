@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
@@ -11,6 +11,7 @@ import {
   selector: 'app-auto-play-variant',
   imports: [CarouselModule],
   templateUrl: './auto-play-variant.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./auto-play-variant.scss'],
 })
 export class AutoPlayVariant {

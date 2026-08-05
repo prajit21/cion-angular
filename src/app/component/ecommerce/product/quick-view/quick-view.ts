@@ -1,4 +1,4 @@
-import { Component, inject, TemplateRef, viewChild } from '@angular/core';
+import { Component, inject, TemplateRef, viewChild, ChangeDetectionStrategy } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 
 import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -9,6 +9,7 @@ import { Products } from '../../../../shared/model/product.model';
   selector: 'app-quick-view',
   imports: [RouterModule],
   templateUrl: './quick-view.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./quick-view.scss'],
 })
 export class QuickView {

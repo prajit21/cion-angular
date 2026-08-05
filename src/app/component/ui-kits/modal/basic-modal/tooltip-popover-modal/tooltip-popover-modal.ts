@@ -1,4 +1,4 @@
-import { Component, inject, TemplateRef } from '@angular/core';
+import { Component, inject, TemplateRef, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -6,6 +6,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-tooltip-popover-modal',
   imports: [],
   templateUrl: './tooltip-popover-modal.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./tooltip-popover-modal.scss'],
 })
 export class TooltipPopoverModal {

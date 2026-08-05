@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { ChartistModule } from 'ng-chartist';
 
@@ -8,6 +8,7 @@ import * as chartData from '../../../../shared/data/component/charts/chartist';
   selector: 'app-horizontal-bar-chart',
   imports: [ChartistModule],
   templateUrl: './horizontal-bar-chart.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./horizontal-bar-chart.scss'],
 })
 export class HorizontalBarChart {

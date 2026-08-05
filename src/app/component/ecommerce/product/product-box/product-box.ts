@@ -5,6 +5,7 @@ import {
   output,
   TemplateRef,
   viewChild,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
@@ -19,6 +20,7 @@ import { QuickView } from '../quick-view/quick-view';
   selector: 'app-product-box',
   imports: [RouterModule, NgbRatingModule, QuickView],
   templateUrl: './product-box.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./product-box.scss'],
 })
 export class ProductBox {

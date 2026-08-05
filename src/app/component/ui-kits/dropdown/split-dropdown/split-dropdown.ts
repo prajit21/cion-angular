@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -8,6 +8,7 @@ import { SplitDropdowns } from '../../../../shared/data/component/ui-kits/dropdo
   selector: 'app-split-dropdown',
   imports: [NgbDropdownModule],
   templateUrl: './split-dropdown.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./split-dropdown.scss'],
 })
 export class SplitDropdown {

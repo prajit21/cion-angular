@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component, SimpleChanges, input, viewChild } from '@angular/core';
+import { Component, SimpleChanges, input, viewChild, ChangeDetectionStrategy } from '@angular/core';
 
 import { Feathericon } from '../../../shared/component/feathericon/feathericon';
 import {
@@ -14,6 +14,7 @@ import { EditBookmark } from '../modal/edit-bookmark/edit-bookmark';
   selector: 'app-bookmark-data',
   imports: [Feathericon, EditBookmark, NgClass],
   templateUrl: './bookmark-data.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./bookmark-data.scss'],
 })
 export class BookmarkData {

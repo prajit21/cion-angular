@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { BalanceProfile } from './balance-profile/balance-profile';
 import { CommonData } from './common-data/common-data';
@@ -24,6 +24,7 @@ import { WidgetChart } from './widget-chart/widget-chart';
     Datepicker,
   ],
   templateUrl: './general.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./general.scss'],
 })
 export class General {}

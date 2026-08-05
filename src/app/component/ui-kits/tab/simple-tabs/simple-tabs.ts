@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -6,6 +6,7 @@ import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-simple-tabs',
   imports: [NgbNavModule],
   templateUrl: './simple-tabs.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./simple-tabs.scss'],
 })
 export class SimpleTabs {

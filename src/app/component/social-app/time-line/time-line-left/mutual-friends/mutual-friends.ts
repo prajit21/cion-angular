@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -8,6 +8,7 @@ import * as data from '../../../../../shared/data/component/social-media/social-
   selector: 'app-mutual-friends',
   imports: [NgbAccordionModule],
   templateUrl: './mutual-friends.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./mutual-friends.scss'],
 })
 export class MutualFriends {

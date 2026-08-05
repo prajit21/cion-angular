@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { StripedData } from '../../../../../shared/data/component/table/bootstrap-table/basic-tables';
 
@@ -6,6 +6,7 @@ import { StripedData } from '../../../../../shared/data/component/table/bootstra
   selector: 'app-striped-row-inverse-table',
   imports: [],
   templateUrl: './striped-row-inverse-table.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./striped-row-inverse-table.scss'],
 })
 export class StripedRowInverseTable {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -8,6 +8,7 @@ import { EdgeButtons, styleButton } from '../../../shared/data/component/buttons
   selector: 'app-edge-style',
   imports: [NgbTooltipModule],
   templateUrl: './edge-style.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./edge-style.scss'],
 })
 export class EdgeStyle {

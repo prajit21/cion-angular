@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-live-alert',
   imports: [],
   templateUrl: './live-alert.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./live-alert.scss'],
 })
 export class LiveAlert {

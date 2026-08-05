@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { BasicProgressbar } from './basic-progressbar/basic-progressbar';
 import { CustomHeightProgressbars } from './custom-height-progressbars/custom-height-progressbars';
@@ -22,6 +22,7 @@ import { StripedAnimatedProgress } from './striped-animated-progress/striped-ani
     CustomHeightProgressbars,
   ],
   templateUrl: './progress.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./progress.scss'],
 })
 export class Progress {}

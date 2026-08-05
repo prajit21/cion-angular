@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { BordersIcons } from './borders-icons/borders-icons';
 import { CustomSwitch } from './custom-switch/custom-switch';
@@ -22,6 +22,7 @@ import { VariationSwitches } from './variation-switches/variation-switches';
     SwitchIcons,
   ],
   templateUrl: './switch.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./switch.scss'],
 })
 export class Switch {}

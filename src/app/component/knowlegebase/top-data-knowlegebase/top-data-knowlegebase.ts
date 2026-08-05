@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { Feathericon } from '../../../shared/component/feathericon/feathericon';
 import { knowledgebaseData } from '../../../shared/data/component/knowledgebase/knowledgebase';
@@ -8,6 +8,7 @@ import { TopCommonFaq } from '../../faq/top-common-faq/top-common-faq';
   selector: 'app-top-data-knowlegebase',
   imports: [Feathericon, TopCommonFaq],
   templateUrl: './top-data-knowlegebase.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./top-data-knowlegebase.scss'],
 })
 export class TopDataKnowlegebase {

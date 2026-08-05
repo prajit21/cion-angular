@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { commongroupButton } from '../../../../shared/data/component/buttons/button-group';
 
@@ -6,6 +6,7 @@ import { commongroupButton } from '../../../../shared/data/component/buttons/but
   selector: 'app-edges-button-group',
   imports: [],
   templateUrl: './edges-button-group.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./edges-button-group.scss'],
 })
 export class EdgesButtonGroup {

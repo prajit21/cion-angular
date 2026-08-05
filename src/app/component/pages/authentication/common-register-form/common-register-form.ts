@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { Feathericon } from '../../../../shared/component/feathericon/feathericon';
@@ -7,6 +7,7 @@ import { Feathericon } from '../../../../shared/component/feathericon/featherico
   selector: 'app-common-register-form',
   imports: [Feathericon, RouterModule],
   templateUrl: './common-register-form.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./common-register-form.scss'],
 })
 export class CommonRegisterForm {

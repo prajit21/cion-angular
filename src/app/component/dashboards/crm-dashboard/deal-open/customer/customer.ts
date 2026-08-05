@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
 
@@ -9,6 +9,7 @@ import * as customerChats from '../../../../../shared/data/component/deshboard/c
   selector: 'app-customer',
   imports: [NgApexchartsModule],
   templateUrl: './customer.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./customer.scss'],
 })
 export class Customer {

@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { Feathericon } from '../../../shared/component/feathericon/feathericon';
@@ -10,6 +10,7 @@ import { Project } from '../../../shared/interface/product-list';
   selector: 'app-project-list',
   imports: [Feathericon, RouterModule, NgClass],
   templateUrl: './project-list.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./project-list.scss'],
 })
 export class ProjectList {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { ActivityFeed } from './activity-feed/activity-feed';
 import { MutualFriends } from './mutual-friends/mutual-friends';
@@ -8,6 +8,7 @@ import { MyProfile } from './my-profile/my-profile';
   selector: 'app-time-line-left',
   imports: [MutualFriends, MyProfile, ActivityFeed],
   templateUrl: './time-line-left.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./time-line-left.scss'],
 })
 export class TimeLineLeft {}

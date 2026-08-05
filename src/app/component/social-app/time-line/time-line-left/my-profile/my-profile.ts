@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -6,6 +6,7 @@ import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-my-profile',
   imports: [NgbAccordionModule],
   templateUrl: './my-profile.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./my-profile.scss'],
 })
 export class MyProfile {

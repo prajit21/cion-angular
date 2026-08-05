@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { BasicTimeline } from './basic-timeline/basic-timeline';
 import { HorizontalTimeline } from './horizontal-timeline/horizontal-timeline';
@@ -10,6 +10,7 @@ import { VariationTimeline } from './variation-timeline/variation-timeline';
   selector: 'app-timeline',
   imports: [BasicTimeline, HoveringTimeline, VariationTimeline, HorizontalTimeline, TimelineChart],
   templateUrl: './timeline.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./timeline.scss'],
 })
 export class Timeline {}

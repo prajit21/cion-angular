@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { coursesData } from '../../../../shared/data/component/widget/general/general';
@@ -7,6 +7,7 @@ import { coursesData } from '../../../../shared/data/component/widget/general/ge
   selector: 'app-courses',
   imports: [RouterModule],
   templateUrl: './courses.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./courses.scss'],
 })
 export class Courses {

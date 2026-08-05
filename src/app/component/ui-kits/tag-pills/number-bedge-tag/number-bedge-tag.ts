@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import {
   NumberBadge,
@@ -10,6 +10,7 @@ import { CommonBadgesPills } from '../common-badges-pills/common-badges-pills';
   selector: 'app-number-bedge-tag',
   imports: [CommonBadgesPills],
   templateUrl: './number-bedge-tag.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./number-bedge-tag.scss'],
 })
 export class NumberBedgeTag {

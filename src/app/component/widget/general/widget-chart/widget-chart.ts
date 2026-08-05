@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { CommonChart } from './common-chart/common-chart';
 import { CommonSalesProfit } from './common-sales-profit/common-sales-profit';
@@ -8,6 +8,7 @@ import * as widgetchat from '../../../../shared/data/component/widget/general/ge
   selector: 'app-widget-chart',
   imports: [CommonChart, CommonSalesProfit],
   templateUrl: './widget-chart.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./widget-chart.scss'],
 })
 export class WidgetChart {

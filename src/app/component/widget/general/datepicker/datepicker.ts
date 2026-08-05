@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbCalendar, NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -6,6 +6,7 @@ import { NgbCalendar, NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-datepicker',
   imports: [NgbDatepickerModule],
   templateUrl: './datepicker.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./datepicker.scss'],
 })
 export class Datepicker {

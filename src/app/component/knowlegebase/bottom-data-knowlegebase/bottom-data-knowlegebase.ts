@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import {
   articlesAndVideosData,
@@ -11,6 +11,7 @@ import { LatestArticlesVideos } from '../../faq/latest-articles-videos/latest-ar
   selector: 'app-bottom-data-knowlegebase',
   imports: [FeaturedTutorials, LatestArticlesVideos],
   templateUrl: './bottom-data-knowlegebase.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./bottom-data-knowlegebase.scss'],
 })
 export class BottomDataKnowlegebase {

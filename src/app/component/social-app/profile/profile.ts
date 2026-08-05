@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { About } from '../about/about';
 import { Friends } from '../friends/friends';
@@ -10,6 +10,7 @@ import { TimeLine } from '../time-line/time-line';
   selector: 'app-profile',
   imports: [TimeLine, About, Friends, Photos, NgClass],
   templateUrl: './profile.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./profile.scss'],
 })
 export class Profile {

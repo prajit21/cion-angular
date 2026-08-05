@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import {
@@ -15,6 +15,7 @@ import { Feathericon } from '../../../../shared/component/feathericon/featherico
   selector: 'app-datepicker',
   imports: [FormsModule, NgbDatepickerModule, Feathericon],
   templateUrl: './datepicker.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./datepicker.scss'],
 })
 export class Datepicker {

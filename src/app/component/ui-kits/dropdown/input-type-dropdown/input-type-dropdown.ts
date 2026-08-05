@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -6,6 +6,7 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-input-type-dropdown',
   imports: [NgbDropdownModule],
   templateUrl: './input-type-dropdown.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./input-type-dropdown.scss'],
 })
 export class InputTypeDropdown {}

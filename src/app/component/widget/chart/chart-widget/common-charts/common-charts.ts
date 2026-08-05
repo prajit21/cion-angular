@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
 
@@ -8,6 +8,7 @@ import { TotalChartOptions } from '../../../../../shared/interface/widgets/chart
   selector: 'app-common-charts',
   imports: [NgApexchartsModule],
   templateUrl: './common-charts.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./common-charts.scss'],
 })
 export class CommonCharts {

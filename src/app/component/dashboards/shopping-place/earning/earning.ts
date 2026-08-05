@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
 
@@ -9,6 +9,7 @@ import { Earnings } from '../../../../shared/data/component/deshboard/shopping-p
   selector: 'app-earning',
   imports: [NgApexchartsModule],
   templateUrl: './earning.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./earning.scss'],
 })
 export class Earning {

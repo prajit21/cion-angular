@@ -1,9 +1,10 @@
-import { Component, output } from '@angular/core';
+import { Component, output, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-chats',
   imports: [],
   templateUrl: './chats.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./chats.scss'],
 })
 export class Chats {

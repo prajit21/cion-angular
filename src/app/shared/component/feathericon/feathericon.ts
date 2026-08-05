@@ -1,5 +1,4 @@
-
-import { Component, input } from '@angular/core';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import * as feather from 'feather-icons';
@@ -8,6 +7,7 @@ import * as feather from 'feather-icons';
   selector: 'app-feather-icon',
   imports: [FormsModule],
   templateUrl: './feathericon.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./feathericon.scss'],
 })
 export class Feathericon {

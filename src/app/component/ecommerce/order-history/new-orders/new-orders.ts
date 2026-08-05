@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbRatingConfig, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -9,6 +9,7 @@ import { Neworders, Order } from '../../../../shared/data/component/e-commerce/o
   selector: 'app-new-orders',
   imports: [Feathericon, NgbRatingModule],
   templateUrl: './new-orders.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./new-orders.scss'],
 })
 export class NewOrders {

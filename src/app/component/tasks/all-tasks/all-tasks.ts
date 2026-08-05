@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component, SimpleChanges, input } from '@angular/core';
+import { Component, SimpleChanges, input, ChangeDetectionStrategy } from '@angular/core';
 
 import * as data from '../../../shared//data/component/tasks/task-list';
 import { Feathericon } from '../../../shared/component/feathericon/feathericon';
@@ -9,6 +9,7 @@ import { Tasklist } from '../../../shared/data/component/tasks/task-list';
   selector: 'app-all-tasks',
   imports: [Feathericon, NgClass],
   templateUrl: './all-tasks.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./all-tasks.scss'],
 })
 export class AllTasks {

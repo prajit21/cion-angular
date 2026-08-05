@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -10,6 +10,7 @@ import { BarRatingModule } from 'ngx-bar-rating';
   selector: 'app-current-rating-bar',
   imports: [BarRatingModule, FontAwesomeModule],
   templateUrl: './current-rating-bar.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./current-rating-bar.scss'],
 })
 export class CurrentRatingBar {

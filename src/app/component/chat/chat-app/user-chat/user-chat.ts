@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { chartUser } from '../../../../shared/data/component/chat/chat';
 
@@ -6,6 +6,7 @@ import { chartUser } from '../../../../shared/data/component/chat/chat';
   selector: 'app-user-chat',
   imports: [],
   templateUrl: './user-chat.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./user-chat.scss'],
 })
 export class UserChat {

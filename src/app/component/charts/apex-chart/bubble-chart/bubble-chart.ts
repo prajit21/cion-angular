@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
 
@@ -8,6 +8,7 @@ import * as chartData from '../../../../shared/data/component/charts/charts';
   selector: 'app-bubble-chart',
   imports: [NgApexchartsModule],
   templateUrl: './bubble-chart.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./bubble-chart.scss'],
 })
 export class BubbleChart {

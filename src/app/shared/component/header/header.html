@@ -74,7 +74,10 @@
                 <div class="ProfileCard-avatar">
                   <app-svg-icon [icon]="menuItem.icon"></app-svg-icon>
                 </div>
-                <a [routerLink]="menuItem?.path" class="realname" (click)="removeFix()"
+                <a
+                  [routerLink]="$safeNavigationMigration(menuItem?.path)"
+                  class="realname"
+                  (click)="removeFix()"
                   >{{ menuItem?.title }}</a
                 >
               </div>

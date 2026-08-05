@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { AbsoluteCard } from './absolute-card/absolute-card';
 import { AbsoluteCard2 } from './absolute-card2/absolute-card2';
@@ -24,6 +24,7 @@ import { BorderWarningState } from './border-warning-state/border-warning-state'
     BorderSecondaryState,
   ],
   templateUrl: './creative-card.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./creative-card.scss'],
 })
 export class CreativeCard {}

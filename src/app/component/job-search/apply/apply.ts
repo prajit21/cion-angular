@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { Education } from './education/education';
 import { Experience } from './experience/experience';
@@ -10,6 +10,7 @@ import { JobFilter } from '../job-filter/job-filter';
   selector: 'app-apply',
   imports: [PersonalDetails, Education, Experience, UploadFiles, JobFilter],
   templateUrl: './apply.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./apply.scss'],
 })
 export class Apply {}

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
 
@@ -9,6 +9,7 @@ import { vistors } from '../../../../shared/data/component/deshboard/shopping-pl
   selector: 'app-visitors',
   imports: [NgApexchartsModule],
   templateUrl: './visitors.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./visitors.scss'],
 })
 export class Visitors {

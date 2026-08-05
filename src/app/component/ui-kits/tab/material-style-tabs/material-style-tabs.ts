@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -6,6 +6,7 @@ import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-material-style-tabs',
   imports: [NgbNavModule],
   templateUrl: './material-style-tabs.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./material-style-tabs.scss'],
 })
 export class MaterialStyleTabs {

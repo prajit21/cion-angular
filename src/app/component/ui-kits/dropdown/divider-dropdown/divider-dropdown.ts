@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -8,6 +8,7 @@ import { DividerDropdowns } from '../../../../shared/data/component/ui-kits/drop
   selector: 'app-divider-dropdown',
   imports: [NgbDropdownModule],
   templateUrl: './divider-dropdown.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./divider-dropdown.scss'],
 })
 export class DividerDropdown {
